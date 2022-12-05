@@ -6,6 +6,7 @@ using TMPro;
 public class TogglePauseOverlayScript : MonoBehaviour
 {
     public Canvas overlayCanvas;
+    public Canvas optionsCanvas;
     public string seed;
     public TextMeshProUGUI textElement;
 
@@ -15,12 +16,13 @@ public class TogglePauseOverlayScript : MonoBehaviour
 
     private void Start()
     {
-        
+
 
     }
     // Update is called once per frame
     void Update()
     {
+        //exits pause
         if (Input.GetKeyDown(KeyCode.Escape)) {
           if (overlayCanvas.gameObject.activeInHierarchy) {
             overlayCanvas.gameObject.SetActive(false);
@@ -28,10 +30,15 @@ public class TogglePauseOverlayScript : MonoBehaviour
           }
           //Shows pause
           else {
+
+            //seed stuff
             createSeed();
             tmpInput.text = seed;
-            overlayCanvas.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            //end seed stuff
+            if (!optionsCanvas.gameObject.activeInHierarchy) {
+              overlayCanvas.gameObject.SetActive(true);
+              Time.timeScale = 0;
+            }
           }
         }
     }
@@ -51,7 +58,7 @@ public class TogglePauseOverlayScript : MonoBehaviour
         {
             seedList.Add(Random.Range(0, 9));
         }
-        
+
         for (int listSize = 0; listSize < seedList.Count; listSize++)
         {
             string currentSeedLoc = seedList[listSize].ToString();
@@ -59,6 +66,6 @@ public class TogglePauseOverlayScript : MonoBehaviour
         }
         print(seedString);
         seed = seedString;
-        
+
     }
 }
