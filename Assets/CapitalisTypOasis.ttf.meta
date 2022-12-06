@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 78cd87c8cc18240cfaa137808778303e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - CapitalisTypOasis
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a8fd8c56f08d14e959006bbab0439569, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
