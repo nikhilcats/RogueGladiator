@@ -10,8 +10,6 @@
 //     private BoardManager boardScript;                        //Store a reference to our BoardManager which will set up the level.
 //     private int gameLevel = 0;                                    //Current level number, expressed in game as "Day 1".
 //     [HideInInspector] public bool playersTurn = true;
-//     [SerializeField]
-//     private string seed;
 
 //     // Player stats that persist through levels
 //     public int playerLevel = 1;
@@ -25,15 +23,12 @@
 //     public int playerExp = 0;
 //     public int playerExpToNext = 10;
 
-//     public string currentRoom;
-
 //     //private bool doingSetup = true;
 
 
 //     //Awake is always called before any Start functions
 //     void Awake()
 //     {
-//         seed = "1111111111111111";
 //         //Check if instance already exists
 //         if (instance == null)
 

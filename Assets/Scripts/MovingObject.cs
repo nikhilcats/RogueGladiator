@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+//The abstract keyword enables you to create classes and class members that are incomplete and must be implemented in a derived class.
 public abstract class MovingObject : MonoBehaviour
 {
     private Rigidbody2D rb2D;
@@ -9,6 +10,7 @@ public abstract class MovingObject : MonoBehaviour
 
     protected virtual void Start()
     {
+        Debug.Log("MovingObject.Start()");
         rb2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -24,9 +26,4 @@ public abstract class MovingObject : MonoBehaviour
     {
         rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
     }
-
-//     protected virtual Vector2 GetVelocity()
-//     {
-        
-//     }
 }
