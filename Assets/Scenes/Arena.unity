@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 903055057}
   - component: {fileID: 903055060}
   - component: {fileID: 903055059}
+  - component: {fileID: 903055061}
   m_Layer: 0
   m_Name: Enemyground
   m_TagString: Untagged
@@ -1260,8 +1261,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535f61773523b0a4499714271bbb5958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polygonCollider: {fileID: 0}
-  numberOfEnemies: 5
+--- !u!114 &903055061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903055053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911ba748a250a4849ae0b6583472e278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compositeCollider: {fileID: 0}
+  numberOfTraps: 5
+  traps: []
+  Trap1: {fileID: 0}
 --- !u!1 &932596902
 GameObject:
   m_ObjectHideFlags: 0
