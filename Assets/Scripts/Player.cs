@@ -5,10 +5,10 @@ using System;
 public class Player: MovingObject
 {
     private float moveSpeed;
+
     protected override void Start()
     {
-        Debug.Log("Player.Start()");
-        moveSpeed = 1f;
+        moveSpeed = 5f;
         base.Start();
     }
 
@@ -21,5 +21,10 @@ public class Player: MovingObject
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
     }
 }
