@@ -56,7 +56,7 @@ public class TrapManager : MonoBehaviour
         return new Vector3(
             Random.Range(bounds.min.x * scale, bounds.max.x * scale),
             Random.Range(bounds.min.y * scale, bounds.max.y * scale),
-            Random.Range(bounds.min.z * scale, bounds.max.z * scale)
+            Random.Range(0, 0)
         );
     }
 
