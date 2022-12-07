@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
     {
         //Vector2[] cornerPoints = polygonCollider.points;
         int i = 0;
-        double delta = 1.0;
+        double delta = 0.5;
         while (i < numberOfEnemies)
         {
             Vector3 rndPoint3D = RandomPointInBounds(compositeCollider.bounds, 1f);
@@ -30,8 +30,10 @@ public class EnemyManager : MonoBehaviour
             Vector2 rndPointInside = compositeCollider.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
             if (rndPointInside.x == rndPoint2D.x && rndPointInside.y == rndPoint2D.y)
             {
+                Debug.Log("Entered if statement branch with i=" + i);
                 foreach (GameObject enemy in enemies)
                 {
+                    Debug.Log("Entered foreach loop with i=" + i);
                     if (Math.Abs(enemy.transform.position.x - rndPoint2D.x) < delta && Math.Abs(enemy.transform.position.y - rndPoint2D.y) < delta)
                     {
                         Debug.Log("Too close! Existing enemy at " + enemy.transform.position.x + "," + enemy.transform.position.y + ". Random point is " + rndPoint2D.x + "," + rndPoint2D.y);
