@@ -547,7 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overlayCanvas1: {fileID: 1389664941}
   overlayCanvas2: {fileID: 1445393202}
-  translucent: {fileID: 1445393203}
+  translucent: {fileID: 0}
   isTranslucent: 0
 --- !u!1 &397217234
 GameObject:
@@ -1409,7 +1409,7 @@ PrefabInstance:
     - target: {fileID: 7711822281553366525, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
       propertyPath: translucent
       value: 
-      objectReference: {fileID: 1445393203}
+      objectReference: {fileID: 0}
     - target: {fileID: 7711822281553366525, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
       propertyPath: isTranslucent
       value: 0
@@ -1506,16 +1506,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9150802975837660478, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
 --- !u!223 &1445393202 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 7711822281597237881, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
-  m_PrefabInstance: {fileID: 1445393201}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1445393203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7711822283295417910, guid: e2b46bd7d37204903aaf44ddc2c102c3, type: 3}
   m_PrefabInstance: {fileID: 1445393201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1525195440
