@@ -12,9 +12,17 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
   void Start()
   {
     player = GameObject.Find("GameManager/Playerground/Player");
-    Debug.Log("HERE");
-    Debug.Log(player);
     component = player.GetComponent<Player>();
+  }
+
+  void Update()
+  {
+    //disable traps if game state no longer allows
+    bool inPlay = true; //placeholder for game state decision
+    if (!inPlay)
+    {
+      DisarmTrap();
+    }
   }
 
   void OnTriggerEnter2D(Collider2D other)

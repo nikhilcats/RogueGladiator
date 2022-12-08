@@ -6,25 +6,65 @@ using Random = UnityEngine.Random;
 public class TrapManager : MonoBehaviour
 {
     public CompositeCollider2D compositeCollider;
-    public int numberOfTraps = 5;
+    public int numberOfSpikeTraps = 5;
     public List<GameObject> traps;
+    public List<GameObject> boulders;
+    public float boulderFreq = 1; //how many boulders per second
+    public int waiting = 300; //every x frames
 
     public GameObject TrapPrefab;
+    public GameObject BoulderPrefab;
 
     void Start()
     {
         compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
         traps = new List<GameObject>();
-        Debug.Log("START TRAP MANAGER");
-        spawnTraps();
+        spawnSpikeTraps();
     }
 
-    private void spawnTraps()
+    void Update()
+    {
+        //spawn boulder IF IT MAKES SENSE IN CURRENT GAME STATE (still fighting enemies)
+        bool inPlay = true; //placeholder for game state decision
+        if (inPlay)
+        {
+          //must determine how frequently to drop boulder
+          //PLACEHOLDER
+          waiting--;
+          if (waiting < 1)
+          {
+            waiting = 300;
+            spawnBoulder();
+          }
+        }
+    }
+
+    private void spawnBoulder()
+    {
+      //determine location of boulder to spawn
+      Vector3 rndPoint3D = RandomPointInBoundsForTraps(compositeCollider.bounds, 1f);
+      Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
+      //add boulder to boulder list
+      GameObject newBoulder = Instantiate(BoulderPrefab, rndPoint2D, Quaternion.identity);
+      newBoulder.transform.parent = this.transform;
+      boulders.Add(newBoulder);
+      //reference boulder
+      int boulderIndex = boulders.Count - 1;
+      //play boulder animation
+      GameObject ourBoulder = boulders[boulderIndex];
+      Animator boulderAnim = ourBoulder.GetComponent<Animator>();
+      boulderAnim.Play("boulderFall");
+      //boulderAnim.Play("boulderLand");
+      Debug.Log("boulder fell");
+      UnityEngine.Object.Destroy(ourBoulder, 2.0f);
+    }
+
+    private void spawnSpikeTraps()
     {
         //Vector2[] cornerPoints = polygonCollider.points;
         int i = 0;
         double delta = 0.5;
-        while (i < numberOfTraps)
+        while (i < numberOfSpikeTraps)
         {
             Vector3 rndPoint3D = RandomPointInBoundsForTraps(compositeCollider.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
@@ -58,5 +98,31 @@ public class TrapManager : MonoBehaviour
             Random.Range(bounds.min.y * scale, bounds.max.y * scale),
             Random.Range(0, 0)
         );
+    }
+
+    //arm all spike traps
+    public void Arm()
+    {
+      foreach (GameObject trap in traps)
+      {
+        SpikeTrapBehaviorScript trapBehavior = trap.GetComponent<SpikeTrapBehaviorScript>();
+        Animator trapAnim = trap.GetComponent<Animator>();
+        trapBehavior.ArmTrap();
+        trapAnim.Play("spikeArm");
+        Debug.Log("trap armed");
+      }
+    }
+
+    //disarm all spike traps
+    public void Disarm()
+    {
+      foreach (GameObject trap in traps)
+      {
+        SpikeTrapBehaviorScript trapBehavior = trap.GetComponent<SpikeTrapBehaviorScript>();
+        Animator trapAnim = trap.GetComponent<Animator>();
+        trapBehavior.DisarmTrap();
+        trapAnim.Play("spikeDisarm");
+        Debug.Log("trap disarmed");
+      }
     }
 }

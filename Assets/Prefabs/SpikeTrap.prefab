@@ -46,7 +46,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.018606007, y: 0.013500214}
@@ -75,7 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
-  player: {fileID: 2777199783750807105, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
 --- !u!212 &139402092358131918
 SpriteRenderer:
   m_ObjectHideFlags: 0
