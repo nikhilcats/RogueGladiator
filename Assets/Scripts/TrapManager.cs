@@ -9,7 +9,7 @@ public class TrapManager : MonoBehaviour
     public int numberOfTraps = 5;
     public List<GameObject> traps;
 
-    public GameObject Trap1;
+    public GameObject TrapPrefab;
 
     void Start()
     {
@@ -41,7 +41,7 @@ public class TrapManager : MonoBehaviour
                         goto tryAgain;
                     }
                 }
-                GameObject newTrap = Instantiate(Trap1, rndPoint2D, Quaternion.identity);
+                GameObject newTrap = Instantiate(TrapPrefab, rndPoint2D, Quaternion.identity);
                 newTrap.transform.parent = this.transform;
                 traps.Add(newTrap);
                 Debug.Log("new trap position: " + rndPoint2D.x + ", " + rndPoint2D.y);
@@ -59,5 +59,4 @@ public class TrapManager : MonoBehaviour
             Random.Range(0, 0)
         );
     }
-
 }

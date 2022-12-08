@@ -45,6 +45,9 @@ public class Player: MovingObject
 
     void updateHealthText()
     {
-      healthUIText.text = string.Format("{0}", health);
+      Debug.Log("Current health: " + health);
+      String healthStr = health.ToString();
+      healthUIText.text = healthStr;//string.Format("{0}", health);
+      Debug.Log(healthUIText.text);
     }
 }

@@ -1,7 +1,7 @@
 // using UnityEngine;
 // using UnityEngine.SceneManagement;
 // using System.Collections;
-// using System.Collections.Generic;        //Allows us to use Lists. 
+// using System.Collections.Generic;        //Allows us to use Lists.
 
 // public class GameManager : MonoBehaviour
 // {
@@ -20,7 +20,7 @@
 //     public int playerAtkDamage = 3;
 //     public float playerAtkSpeed = 0.1f;
 //     public float playerMoveSpeed = 3f;
-    
+
 //     public float expMultiplier = 1.8f;
 //     public int playerExp = 0;
 //     public int playerExpToNext = 10;
@@ -44,7 +44,7 @@
 //         else if (instance != this)
 
 //             //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
-//             Destroy(gameObject);    
+//             Destroy(gameObject);
 
 //         //Sets this to not be destroyed when reloading scene
 //         DontDestroyOnLoad(gameObject);
@@ -52,7 +52,7 @@
 //         //Get a component reference to the attached BoardManager script
 //         boardScript = GetComponent<BoardManager>();
 
-//         //Call the InitGame function to initialize the first level 
+//         //Call the InitGame function to initialize the first level
 //         InitGame();
 //     }
 
