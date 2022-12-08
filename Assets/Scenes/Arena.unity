@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 338142954}
   - component: {fileID: 338142957}
   - component: {fileID: 338142956}
+  - component: {fileID: 338142958}
   m_Layer: 6
   m_Name: Playerground
   m_TagString: Untagged
@@ -510,6 +511,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &338142958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338142953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911ba748a250a4849ae0b6583472e278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compositeCollider: {fileID: 0}
+  numberOfTraps: 5
+  traps: []
+  Trap1: {fileID: 139402092358131914, guid: 0dd1f9877a7fe441e83822d136824985, type: 3}
 --- !u!1 &438181570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1361,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903055053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911ba748a250a4849ae0b6583472e278, type: 3}
   m_Name: 
@@ -1753,9 +1770,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4201638149055739883, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 2096504495}
+    - target: {fileID: 4201638149055739883, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
       propertyPath: outOfBounds
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4201638149055739883, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
+      propertyPath: healthUIText
+      value: 
+      objectReference: {fileID: 2096504495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
 --- !u!1 &1231974870
@@ -3144,7 +3169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 69
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

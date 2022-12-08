@@ -35,6 +35,10 @@ public class Player: MovingObject
     public void TakeDamage(int amount)
     {
       health -= amount;
+      if (health < 0)
+      {
+        health = 0;
+      }
       Debug.Log("Current health: " + health);
       updateHealthText();
     }

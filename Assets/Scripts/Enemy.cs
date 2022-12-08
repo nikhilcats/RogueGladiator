@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MovingObject
-{   
-    
+{
+
     private float damage;
     private float health;
     private float moveSpeed;
@@ -18,12 +18,20 @@ public class Enemy : MovingObject
 
     protected virtual void Update()
     {
-        
+
     }
 
     protected virtual void FixedUpdate()
     {
-        
+
     }
 
+    public void TakeDamage(float amount)
+    {
+      health -= amount;
+      if (health < 0)
+      {
+        health = 0;
+      }
+    }
 }
