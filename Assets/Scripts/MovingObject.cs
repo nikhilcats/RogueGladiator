@@ -24,9 +24,4 @@ public abstract class MovingObject : MonoBehaviour
     {
         rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
     }
-
-//     protected virtual Vector2 GetVelocity()
-//     {
-        
-//     }
 }
