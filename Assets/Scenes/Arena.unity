@@ -733,8 +733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531, y: 303}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -518.43024, y: 221.03024}
+  m_SizeDelta: {x: 64.1395, y: 64.1395}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566315211
 MonoBehaviour:
@@ -1669,6 +1669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2777199783750807114, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2777199783750807116, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1757,6 +1761,10 @@ PrefabInstance:
       propertyPath: outOfBounds
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4201638149055739883, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
+      propertyPath: healthUIText
+      value: 
+      objectReference: {fileID: 2096504495}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
 --- !u!1 &1231974870
@@ -3122,7 +3130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: 303}
+  m_AnchoredPosition: {x: -386.36, y: 221.03}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096504495
