@@ -1244,10 +1244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe36ee7d097d23f40bd59a0697260910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compositeCollider: {fileID: 0}
-  numberOfEnemies: 5
+  spawnBoundary: {fileID: 0}
   enemies: []
   Enemy1: {fileID: 1844930401815919459, guid: a80e49bbb4d41e6438fecc5eafae4284, type: 3}
+  Enemy2: {fileID: 2312337106767318785, guid: 37258a8acbc94fc4bbdc317625ba94f3, type: 3}
+  Enemy3: {fileID: 2285276498216158074, guid: 44db67dafbfc04e479c94ad63f133c30, type: 3}
 --- !u!114 &903055060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,7 +1552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777199783750807118, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.507
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 2777199783750807118, guid: c25a53caebca66a4781f4258067d1e01, type: 3}
       propertyPath: m_LocalPosition.y
