@@ -48,15 +48,11 @@ public class TrapManager : MonoBehaviour
       GameObject newBoulder = Instantiate(BoulderPrefab, rndPoint2D, Quaternion.identity);
       newBoulder.transform.parent = this.transform;
       boulders.Add(newBoulder);
-      //reference boulder
-      int boulderIndex = boulders.Count - 1;
-      //play boulder animation
-      GameObject ourBoulder = boulders[boulderIndex];
-      Animator boulderAnim = ourBoulder.GetComponent<Animator>();
-      boulderAnim.Play("boulderFall");
-      //boulderAnim.Play("boulderLand");
-      Debug.Log("boulder fell");
-      UnityEngine.Object.Destroy(ourBoulder, 2.0f);
+      //run boulder behavior method
+      BoulderBehavior behavior = newBoulder.GetComponent<BoulderBehavior>();
+      behavior.DropBoulder();
+      Debug.Log("boulder dropped");
+      UnityEngine.Object.Destroy(newBoulder, 2.0f);
     }
 
     private void spawnSpikeTraps()

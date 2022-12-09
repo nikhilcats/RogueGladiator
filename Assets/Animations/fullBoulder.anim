@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: boulderFall
+  m_Name: fullBoulder
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -31,6 +31,12 @@ AnimationClip:
       value: {fileID: 632885804, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
     - time: 0.41666666
       value: {fileID: -1439593859, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - time: 0.5
+      value: {fileID: 498936356, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - time: 0.5833333
+      value: {fileID: -1444675879, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - time: 0.6666667
+      value: {fileID: -1478334383, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,12 +62,15 @@ AnimationClip:
     - {fileID: -774345739, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
     - {fileID: 632885804, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
     - {fileID: -1439593859, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - {fileID: 498936356, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - {fileID: -1444675879, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
+    - {fileID: -1478334383, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -80,4 +89,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.5
+    functionName: Land
+    data: 
+    objectReferenceParameter: {fileID: 6200978371782180327, guid: 7e38f7c2051204ed8aaa3267b58bb068, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
