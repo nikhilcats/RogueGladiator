@@ -7,41 +7,43 @@ public class TrapManager : MonoBehaviour
 {
     //arena setup parameters
     private int spikeTrapAmt;
-    public float boulderFreq = 1f; //how many boulders per x (not in use)
-    public static float waiting = 500f; //every x frames
-    public float initWait = waiting;
+    private double boulderFreq; //how many boulders per second
 
     private ArenaManager arenaManager;
+    private float time = 0f;
+    private float frequency = 0;
     public CompositeCollider2D compositeCollider;
     public List<GameObject> traps;
     public List<GameObject> boulders;
-
     public GameObject TrapPrefab;
     public GameObject BoulderPrefab;
 
     void Start()
     {
-        arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
-        compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
-        traps = new List<GameObject>();
-        spawnSpikeTraps();
+      arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+      compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
+      traps = new List<GameObject>();
+      Debug.Log(boulderFreq);
+      boulderFreq = arenaManager.boulderFreq;
+      if (boulderFreq > 0)
+      {
+        frequency = (float)1/(float)boulderFreq;
+        Debug.Log(frequency);
+      }
+      spawnSpikeTraps();
     }
 
     void Update()
     {
-        //spawn boulder IF IT MAKES SENSE IN CURRENT GAME STATE (still fighting enemies)
-        bool inPlay = true; //placeholder for game state decision
-        if (inPlay)
+      if (frequency != 0)
+      {
+        time += Time.deltaTime;
+        if (time >= frequency)
         {
-          //must determine how frequently to drop boulder
-          //PLACEHOLDER
-          waiting--;
-          if (waiting < 1)
-          {
-            waiting = initWait;
-            spawnBoulder();
-          }
+          spawnBoulder();
+          time = 0f;
         }
+      }
     }
 
     private void spawnBoulder()

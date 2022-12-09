@@ -1135,6 +1135,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535f61773523b0a4499714271bbb5958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkEnemyAmt: 0
+  jumpEnemyAmt: 0
+  rangedEnemyAmt: 0
+  spikeTrapAmt: 0
+  boulderFreq: 0
 --- !u!1 &438181570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,7 +1572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compositeCollider: {fileID: 0}
-  numberOfEnemies: 5
   enemies: []
   Enemy1: {fileID: 1844930401815919459, guid: a80e49bbb4d41e6438fecc5eafae4284, type: 3}
 --- !u!114 &538684458
@@ -1583,11 +1587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compositeCollider: {fileID: 0}
-  numberOfSpikeTraps: 5
   traps: []
   boulders: []
-  boulderFreq: 1
-  waiting: 300
   TrapPrefab: {fileID: 139402092358131914, guid: 0dd1f9877a7fe441e83822d136824985, type: 3}
   BoulderPrefab: {fileID: 6200978371782180327, guid: 7e38f7c2051204ed8aaa3267b58bb068, type: 3}
 --- !u!66 &538684459
@@ -5265,6 +5266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8b752759cb20244a6276ab1d78cd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkEnemyAmt: 1
+  jumpEnemyAmt: 1
+  rangedEnemyAmt: 1
+  spikeTrapAmt: 1
+  boulderFreq: 1
   playerLevel: 1
   playerHealth: 100
   playerMaxHealth: 101
