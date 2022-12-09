@@ -11,7 +11,7 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
 
   void Start()
   {
-    player = GameObject.Find("GameManager/Playerground/Player");
+    player = GameObject.Find("GameManager/ArenaManager/PlayerBounds/Player");
     component = player.GetComponent<Player>();
   }
 

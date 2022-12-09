@@ -5,14 +5,17 @@ using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
-    public CompositeCollider2D compositeCollider;
-    public int numberOfEnemies = 5;
-    public List<GameObject> enemies;
+    //arena setup parameters
+    private int walkEnemyAmt;
 
+    public CompositeCollider2D compositeCollider;
+    public List<GameObject> enemies;
     public GameObject Enemy1;
+    private ArenaManager arenaManager;
 
     void Start()
     {
+        arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
         compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
         spawnEnemies();
@@ -20,10 +23,11 @@ public class EnemyManager : MonoBehaviour
 
     private void spawnEnemies()
     {
+        walkEnemyAmt = arenaManager.walkEnemyAmt;
         //Vector2[] cornerPoints = polygonCollider.points;
         int i = 0;
         double delta = 0.5;
-        while (i < numberOfEnemies)
+        while (i < walkEnemyAmt)
         {
             Vector3 rndPoint3D = RandomPointInBounds(compositeCollider.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
