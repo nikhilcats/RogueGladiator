@@ -9,7 +9,7 @@ public class ArenaManager : MonoBehaviour
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
   public int spikeTrapAmt;
-  public float boulderFreq;
+  public double boulderFreq;
 
   //GameManager reference
   private GameObject gameManager;

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
   public int spikeTrapAmt;
-  public float boulderFreq;
+  public double boulderFreq;
 
   // Player stats that persist through levels
   public int playerLevel = 1;
@@ -29,11 +29,8 @@ public class GameManager : MonoBehaviour
 //     public float expMultiplier = 1.8f;
 //     public int playerExp = 0;
 //     public int playerExpToNext = 10;
-
 //     public string currentRoom;
-
 //     //private bool doingSetup = true;
-
 
   //Awake is always called before any Start functions
   void Awake()
@@ -84,13 +81,10 @@ public class GameManager : MonoBehaviour
     arenaManager.SetupScene(floorLevel);
   }
 
-
-
 //     public void GameOver()
 //     {
 //         enabled = false;
 //     }
-
 
   //Update is called every frame.
   void Update()
