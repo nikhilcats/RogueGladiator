@@ -6,11 +6,16 @@ using TMPro;
 public class Player: MovingObject
 {
     private float moveSpeed;
-    private int health = 100;
+    private int health;
     public TextMeshProUGUI healthUIText;
+    private GameObject gameManager;
+    private GameManager gManagerScript;
 
     protected override void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+        gManagerScript = gameManager.GetComponent<GameManager>();
+        health = gManagerScript.playerMaxHealth;
         moveSpeed = 5f;
         updateHealthText();
         base.Start();

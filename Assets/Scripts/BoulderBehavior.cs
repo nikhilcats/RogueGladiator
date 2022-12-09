@@ -12,7 +12,7 @@ public class BoulderBehavior : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    player = GameObject.Find("GameManager/Playerground/Player");
+    player = GameObject.Find("GameManager/ArenaManager/PlayerBounds/Player");
     component = player.GetComponent<Player>();
   }
 

@@ -5,18 +5,23 @@ using Random = UnityEngine.Random;
 
 public class TrapManager : MonoBehaviour
 {
+    //arena setup parameters
+    private int spikeTrapAmt;
+    public float boulderFreq = 1f; //how many boulders per x (not in use)
+    public static float waiting = 500f; //every x frames
+    public float initWait = waiting;
+
+    private ArenaManager arenaManager;
     public CompositeCollider2D compositeCollider;
-    public int numberOfSpikeTraps = 5;
     public List<GameObject> traps;
     public List<GameObject> boulders;
-    public float boulderFreq = 1; //how many boulders per x
-    public int waiting = 300; //every x frames
 
     public GameObject TrapPrefab;
     public GameObject BoulderPrefab;
 
     void Start()
     {
+        arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
         compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
         traps = new List<GameObject>();
         spawnSpikeTraps();
@@ -33,7 +38,7 @@ public class TrapManager : MonoBehaviour
           waiting--;
           if (waiting < 1)
           {
-            waiting = 300;
+            waiting = initWait;
             spawnBoulder();
           }
         }
@@ -57,10 +62,11 @@ public class TrapManager : MonoBehaviour
 
     private void spawnSpikeTraps()
     {
+        spikeTrapAmt = arenaManager.spikeTrapAmt;
         //Vector2[] cornerPoints = polygonCollider.points;
         int i = 0;
         double delta = 0.5;
-        while (i < numberOfSpikeTraps)
+        while (i < spikeTrapAmt)
         {
             Vector3 rndPoint3D = RandomPointInBoundsForTraps(compositeCollider.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
