@@ -9,7 +9,7 @@ public class TrapManager : MonoBehaviour
     public int numberOfSpikeTraps = 5;
     public List<GameObject> traps;
     public List<GameObject> boulders;
-    public float boulderFreq = 1; //how many boulders per second
+    public float boulderFreq = 1; //how many boulders per x
     public int waiting = 300; //every x frames
 
     public GameObject TrapPrefab;
