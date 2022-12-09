@@ -35,12 +35,19 @@ public class Player: MovingObject
     public void TakeDamage(int amount)
     {
       health -= amount;
+      if (health < 0)
+      {
+        health = 0;
+      }
       Debug.Log("Current health: " + health);
       updateHealthText();
     }
 
     void updateHealthText()
     {
-      healthUIText.text = string.Format("{0}", health);
+      Debug.Log("Current health: " + health);
+      String healthStr = health.ToString();
+      healthUIText.text = healthStr;//string.Format("{0}", health);
+      Debug.Log(healthUIText.text);
     }
 }
