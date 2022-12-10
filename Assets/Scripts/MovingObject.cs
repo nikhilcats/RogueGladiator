@@ -7,17 +7,25 @@ public abstract class MovingObject : MonoBehaviour
 
     protected Vector2 velocity;
 
+    protected bool changeSprite;
+
     protected virtual void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+        changeSprite = false;
+        velocity = new Vector2(0, 0);
     }
 
     protected virtual void Update()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
+        if (horizontalInput - velocity.x != 0 || verticalInput - velocity.y != 0)
+            changeSprite = true;
+        else
+            changeSprite = false;
         velocity = new Vector2(horizontalInput, verticalInput);
-        velocity.Normalize();
+        // Normalize velocity in subclasses!
     }
 
     protected virtual void FixedUpdate()
