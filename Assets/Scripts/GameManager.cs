@@ -60,9 +60,7 @@ public class GameManager : MonoBehaviour
     //Sets this to not be destroyed when reloading scene
     DontDestroyOnLoad(instance);
     //Get a component reference to the attached BoardManager script
-    arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
-    arenaManagerObj.transform.parent = this.transform;
-    arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
+    newArena();
     //Call the InitGame function to initialize the first level
     InitGame();
   }
@@ -70,8 +68,17 @@ public class GameManager : MonoBehaviour
   public void newArena()
   {
     //if old arenaManager exists destroy it
-    //spawn new arenaManager prefab to represent the arena
-
+    if (arenaManager)
+    {
+      Destroy(arenaManager);
+    }
+    //spawn new arena
+    else
+    {
+      arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+      arenaManagerObj.transform.parent = this.transform;
+      arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
+    }
   }
 
 /*
