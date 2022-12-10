@@ -8,3 +8,70 @@ Player
 x: 0.14
 y: -4.59
 z: 2
+
+
+We want all this in 16:9
+
+LIST OF OBJECTS:
+Arena Scene
+  Canvas                             //main canvas
+  Pause Canvas
+    translucent
+    PauseText
+    InputSeedText
+      Text Area
+      Placeholder
+      Text
+    ReturnToGameButton
+      Text
+    OptionsButton
+      Text
+    QuitGameButton
+      Text
+    SeedText
+  OptionsCanvas
+    translucent
+    OptionsText
+    GeneralSlider
+      GeneralAudioText
+      Background
+      Fill Area
+        Fill
+      Handle Slide Area
+        Handle
+    MusicSlider
+      MusicAudioText
+      Background
+      Fill Area
+        Fill
+      Handle Slide Area
+        Handle
+    SFXSlider
+      SFXAudioText
+      Background
+      Fill Area
+        Fill
+      Handle Slide Area
+        Handle
+    BackButton
+      Text
+  BackgroundImage
+  GameManager
+    Main Camera
+    UICanvas
+      HPText
+      heart
+      ArmButton
+        Text
+      DisarmButton
+        Text
+      Button
+        Text
+    ArenaManager(Clone)                 //when game is running only
+      PlayerBounds
+        Player
+      Enemyground
+        SpikeTrap(Clone)
+        Enemy(Clone)
+        Boulder(Clone)
+  EventSystem
