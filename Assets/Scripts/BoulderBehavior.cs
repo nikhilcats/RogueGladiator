@@ -18,7 +18,12 @@ public class BoulderBehavior : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-
+    //set new player on arena update
+    if (!player)
+    {
+      player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
+      component = player.GetComponent<Player>();
+    }
   }
 
   public void DropBoulder()

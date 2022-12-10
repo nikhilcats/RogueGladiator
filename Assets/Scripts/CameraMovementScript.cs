@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovementScript : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     private Vector3 playerPosition;
     private Vector3 cameraPosition;
     //camera constraints
