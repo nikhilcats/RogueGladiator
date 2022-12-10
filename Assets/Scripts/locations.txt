@@ -1,0 +1,10 @@
+//NOTES ABOUT WHERE TO PLACE AND ORGANIZE OBJECTS//
+ArenaManager
+x: 4.437139
+y: -0.2125223
+z: 25
+
+Player
+x: 0.14
+y: -4.59
+z: 2

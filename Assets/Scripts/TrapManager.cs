@@ -13,7 +13,7 @@ public class TrapManager : MonoBehaviour
     private float time = 0f;
     private float frequency = 0;
     private int chance;
-    public bool sometimesBoulderSticks = false;
+    private bool sometimesBoulderSticks = false;
     public CompositeCollider2D compositeCollider;
     public List<GameObject> traps;
     public List<GameObject> boulders;
@@ -22,15 +22,13 @@ public class TrapManager : MonoBehaviour
 
     void Start()
     {
-      arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+      arenaManager = transform.parent.GetComponent<ArenaManager>();
       compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
       traps = new List<GameObject>();
-      Debug.Log(boulderFreq);
       boulderFreq = arenaManager.boulderFreq;
       if (boulderFreq > 0)
       {
         frequency = (float)1/(float)boulderFreq;
-        Debug.Log(frequency);
       }
       spawnSpikeTraps();
     }
@@ -92,20 +90,16 @@ public class TrapManager : MonoBehaviour
             Vector2 rndPointInside = compositeCollider.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
             if (rndPointInside.x == rndPoint2D.x && rndPointInside.y == rndPoint2D.y)
             {
-                Debug.Log("Entered if statement branch with i=" + i);
                 foreach (GameObject trap in traps)
                 {
-                    Debug.Log("Entered foreach loop with i=" + i);
                     if (Math.Abs(trap.transform.position.x - rndPoint2D.x) < delta && Math.Abs(trap.transform.position.y - rndPoint2D.y) < delta)
                     {
-                        Debug.Log("Too close! Existing trap at " + trap.transform.position.x + "," + trap.transform.position.y + ". Random point is " + rndPoint2D.x + "," + rndPoint2D.y);
-                        goto tryAgain;
+                      goto tryAgain;
                     }
                 }
                 GameObject newTrap = Instantiate(TrapPrefab, rndPoint2D, Quaternion.identity);
                 newTrap.transform.parent = this.transform;
                 traps.Add(newTrap);
-                Debug.Log("new trap position: " + rndPoint2D.x + ", " + rndPoint2D.y);
                 i++;
                 tryAgain:;
             }

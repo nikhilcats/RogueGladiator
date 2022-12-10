@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
 
   public static GameManager instance = null;    //Static instance of GameManager which allows it to be accessed by any other script.
   private ArenaManager arenaManager;            //Store a reference to our ArenaManager which will set up the level.
+  private GameObject arenaManagerObj;
+  public GameObject arenaManagerPrefab;
   private int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
   private string seed;
+  private Vector3 arenaManagerTransform = new Vector3(4.437139f, -0.2125223f, 25f);
 
   //arena setup parameters
   public int walkEnemyAmt;
@@ -57,15 +60,18 @@ public class GameManager : MonoBehaviour
     //Sets this to not be destroyed when reloading scene
     DontDestroyOnLoad(instance);
     //Get a component reference to the attached BoardManager script
-    arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
-    Debug.Log(arenaManager);
+    arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+    arenaManagerObj.transform.parent = this.transform;
+    arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
     //Call the InitGame function to initialize the first level
     InitGame();
   }
 
   public void newArena()
   {
-    
+    //if old arenaManager exists destroy it
+    //spawn new arenaManager prefab to represent the arena
+
   }
 
 /*

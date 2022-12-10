@@ -7,7 +7,7 @@ public class Player: MovingObject
 {
     private float moveSpeed;
     private int health;
-    public TextMeshProUGUI healthUIText;
+    private TextMeshProUGUI healthUIText;
     private GameObject gameManager;
     private GameManager gManagerScript;
 
@@ -16,6 +16,7 @@ public class Player: MovingObject
         gameManager = GameObject.Find("GameManager");
         gManagerScript = gameManager.GetComponent<GameManager>();
         health = gManagerScript.playerMaxHealth;
+        healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
         moveSpeed = 5f;
         updateHealthText();
         base.Start();
@@ -44,15 +45,12 @@ public class Player: MovingObject
       {
         health = 0;
       }
-      Debug.Log("Current health: " + health);
       updateHealthText();
     }
 
     void updateHealthText()
     {
-      Debug.Log("Current health: " + health);
       String healthStr = health.ToString();
       healthUIText.text = healthStr;//string.Format("{0}", health);
-      Debug.Log(healthUIText.text);
     }
 }

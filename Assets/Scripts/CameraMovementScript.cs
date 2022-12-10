@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class CameraMovementScript : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     //camera constraints
-    public float followSpeed;
+    private float followSpeed = 1;
     public float xMin;
     public float xMax;
     public float yMin;
     public float yMax;
 
+    void Start()
+    {
+      player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
+    }
     // Update is called once per frame
     void Update()
     {
