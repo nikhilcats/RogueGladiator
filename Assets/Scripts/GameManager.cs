@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
   private int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
   private string seed;
   private Vector3 arenaManagerTransform = new Vector3(4.437139f, -0.2125223f, 25f);
+  private CameraMovementScript camScript;
 
   //arena setup parameters
   public int walkEnemyAmt;
@@ -68,17 +69,14 @@ public class GameManager : MonoBehaviour
   public void newArena()
   {
     //if old arenaManager exists destroy it
-    if (arenaManager)
+    if (arenaManagerObj)
     {
-      Destroy(arenaManager);
+      UnityEngine.Object.Destroy(arenaManagerObj);
     }
     //spawn new arena
-    else
-    {
-      arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
-      arenaManagerObj.transform.parent = this.transform;
-      arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
-    }
+    arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+    arenaManagerObj.transform.parent = this.transform;
+    arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
   }
 
 /*
@@ -102,7 +100,7 @@ public class GameManager : MonoBehaviour
   void InitGame()
   {
     //Call the SetupScene function of the ArenaManager script, pass it current level number.
-    arenaManager.SetupScene(floorLevel);
+    //arenaManager.SetupScene(floorLevel);
   }
 
 //     public void GameOver()
