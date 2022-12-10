@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
   public float playerAtkSpeed = 0.1f;
   public float playerMoveSpeed = 3f;
 
+  //scores
+  private int totalMobsKilled = 0;
+  private float pointScore = 0;
+  private float timeTaken = 0f;
+  //path taken
+
 //     public float expMultiplier = 1.8f;
 //     public int playerExp = 0;
 //     public int playerExpToNext = 10;
@@ -55,6 +61,11 @@ public class GameManager : MonoBehaviour
     Debug.Log(arenaManager);
     //Call the InitGame function to initialize the first level
     InitGame();
+  }
+
+  public void newArena()
+  {
+    
   }
 
 /*

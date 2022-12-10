@@ -7,7 +7,6 @@ public class BoulderBehavior : MonoBehaviour
   public int damage = 5;
   GameObject player;
   Player component;
-  bool landed = false;
 
   // Start is called before the first frame update
   void Start()

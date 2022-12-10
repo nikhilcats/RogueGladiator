@@ -12,6 +12,8 @@ public class TrapManager : MonoBehaviour
     private ArenaManager arenaManager;
     private float time = 0f;
     private float frequency = 0;
+    private int chance;
+    public bool sometimesBoulderSticks = false;
     public CompositeCollider2D compositeCollider;
     public List<GameObject> traps;
     public List<GameObject> boulders;
@@ -59,7 +61,22 @@ public class TrapManager : MonoBehaviour
       BoulderBehavior behavior = newBoulder.GetComponent<BoulderBehavior>();
       behavior.DropBoulder();
       Debug.Log("boulder dropped");
-      UnityEngine.Object.Destroy(newBoulder, 2.0f);
+      //handle random chance of boulder sticking around
+      if (sometimesBoulderSticks)
+      {
+        chance = Random.Range(1,50);
+      }
+      else
+      {
+        chance = 0;
+      }
+      if (chance != 1) {
+        UnityEngine.Object.Destroy(newBoulder, 2.0f);
+      }
+      else
+      {
+        UnityEngine.Object.Destroy(newBoulder, 60.0f);
+      }
     }
 
     private void spawnSpikeTraps()
