@@ -15,7 +15,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start()
     {
-        arenaManager = GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
+        arenaManager = transform.parent.GetComponent<ArenaManager>();
         compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
         spawnEnemies();

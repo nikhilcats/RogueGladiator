@@ -5,13 +5,13 @@ using UnityEngine;
 public class SpikeTrapBehaviorScript : MonoBehaviour
 {
   public int damage = 5;
-  GameObject player;
-  Player component;
-  bool armed = false;
+  private GameObject player;
+  private Player component;
+  bool armed = true;
 
   void Start()
   {
-    player = GameObject.Find("GameManager/ArenaManager/PlayerBounds/Player");
+    player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
     component = player.GetComponent<Player>();
   }
 
@@ -22,6 +22,12 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
     if (!inPlay)
     {
       DisarmTrap();
+    }
+    //set new player on arena update
+    if (!player)
+    {
+      player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
+      component = player.GetComponent<Player>();
     }
   }
 

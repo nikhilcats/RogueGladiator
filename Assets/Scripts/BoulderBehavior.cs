@@ -7,19 +7,23 @@ public class BoulderBehavior : MonoBehaviour
   public int damage = 5;
   GameObject player;
   Player component;
-  bool landed = false;
 
   // Start is called before the first frame update
   void Start()
   {
-    player = GameObject.Find("GameManager/ArenaManager/PlayerBounds/Player");
+    player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
     component = player.GetComponent<Player>();
   }
 
   // Update is called once per frame
   void Update()
   {
-
+    //set new player on arena update
+    if (!player)
+    {
+      player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
+      component = player.GetComponent<Player>();
+    }
   }
 
   public void DropBoulder()
@@ -38,10 +42,12 @@ public class BoulderBehavior : MonoBehaviour
     this.GetComponent<Collider2D>().isTrigger = false;
     //check if player inside box
     Collider2D playerBox = player.GetComponent<Collider2D>();
-    Collider2D boulderBox = this.GetComponent<Collider2D>();
+    Collider2D boulderBox = GetComponent<Collider2D>();
+    Debug.Log(playerBox.bounds.Intersects(boulderBox.bounds));
     if (playerBox.bounds.Intersects(boulderBox.bounds))
     {
-        component.TakeDamage(damage);
+      Debug.Log("TOOK DAMAGE");
+      component.TakeDamage(damage);
     }
   }
 }
