@@ -9,19 +9,24 @@ using TMPro;
 public class Player: MovingObject
 {
     private float moveSpeed;
-    private int health = 100;
+    private int health;
     private TextMeshProUGUI healthUIText;
+    private GameObject gameManager;
+    private GameManager gManagerScript;
     private Vector3 localScale;
     public Animator animator;
 
 
     protected override void Start()
     {
-        moveSpeed = 5f;
-        updateHealthText();
-        base.Start();
-        localScale = transform.localScale;
-        healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
+      gameManager = GameObject.Find("GameManager");
+      gManagerScript = gameManager.GetComponent<GameManager>();
+      health = gManagerScript.playerMaxHealth;
+      healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
+      moveSpeed = 5f;
+      updateHealthText();
+      base.Start();
+      localScale = transform.localScale;
     }
 
     protected override void Update()
@@ -49,7 +54,6 @@ public class Player: MovingObject
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("OnCollisionEnter2D");
     }
 
     public void TakeDamage(int amount)
@@ -66,7 +70,6 @@ public class Player: MovingObject
     void updateHealthText()
     {
       String healthStr = health.ToString();
-      healthUIText.text = healthStr;//string.Format("{0}", health);
-      Debug.Log(healthUIText.text);
+      healthUIText.text = healthStr;
     }
 }
