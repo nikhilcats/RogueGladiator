@@ -96,9 +96,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3299902458109398082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dac0c32b8981f7444ba478b8ed1d0f3f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0782d42b1a38348ec88d719c4137cc7f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -168,3 +168,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthUIText: {fileID: 0}
+  animator: {fileID: 0}
