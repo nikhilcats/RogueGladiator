@@ -33,6 +33,8 @@ public class PortalBehavior : MonoBehaviour
     {
       Debug.Log("new arena spawned");
       //pass portal type to game manager
+      //iterate floor number
+      gameManager.floorLevel++;
       //spawn new arena with new setup
       gameManager.newArena();
     }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
   private ArenaManager arenaManager;            //Store a reference to our ArenaManager which will set up the level.
   private GameObject arenaManagerObj;
   public GameObject arenaManagerPrefab;
-  private int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
+  public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
   private string seed;
   private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f);
   private CameraMovementScript camScript;
