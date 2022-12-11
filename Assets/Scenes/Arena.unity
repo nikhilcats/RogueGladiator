@@ -3237,7 +3237,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.3687572
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3261,7 +3261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428151383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6350177, y: -2.2579324, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3280,10 +3280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a62ea49a700f40ba22cf667ff446a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMin: -1.08
-  xMax: 1.08
-  yMin: -5.82
-  yMax: 5.82
+  xMin: -2.87
+  xMax: 2.87
+  yMin: -6.26
+  yMax: 6.26
 --- !u!1 &1450676913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +3733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705454801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8850177, y: 0.20793237, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3758,8 +3758,8 @@ MonoBehaviour:
   walkEnemyAmt: 0
   jumpEnemyAmt: 0
   rangedEnemyAmt: 0
-  spikeTrapAmt: 4
-  boulderFreq: 10
+  spikeTrapAmt: 5
+  boulderFreq: 0
   playerLevel: 1
   playerHealth: 100
   playerMaxHealth: 102
