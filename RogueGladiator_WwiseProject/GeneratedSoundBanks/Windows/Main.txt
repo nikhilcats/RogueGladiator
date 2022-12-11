@@ -1,0 +1,49 @@
+Event	ID	Name			Wwise Object Path	Notes
+	778926299	Play_Gladiator_Slime_Death			\Default Work Unit\Play_Gladiator_Slime_Death	
+	893465313	Play_Arena_Clear			\Default Work Unit\Play_Arena_Clear	
+	1172822028	Play_Death			\Default Work Unit\Play_Death	
+	1445801392	Play_Lv_Up			\Default Work Unit\Play_Lv_Up	
+	1506258188	Play_Gladiator_Blue_Slime_Attk			\Default Work Unit\Play_Gladiator_Blue_Slime_Attk	
+	1535286580	Play_Wizard_Appears			\Default Work Unit\Play_Wizard_Appears	
+	1685971035	Play_Gladiator_Red_Slime_Attk			\Default Work Unit\Play_Gladiator_Red_Slime_Attk	
+	1806245776	Play_Gladiator_Green_Slime_Walk			\Default Work Unit\Play_Gladiator_Green_Slime_Walk	
+	1927327609	Play_Gladiator_Spikes			\Default Work Unit\Play_Gladiator_Spikes	
+	2044747472	Play_UI			\Default Work Unit\Play_UI	
+	2215072691	Play_Arena_Music			\Default Work Unit\Play_Arena_Music	
+	2273580211	Play_Gladiator_Boulder			\Default Work Unit\Play_Gladiator_Boulder	
+	2415155446	Play_main_menu_theme_Final			\Default Work Unit\Play_main_menu_theme_Final	
+	2970769516	Play_Gladiator_Take_Dmg			\Default Work Unit\Play_Gladiator_Take_Dmg	
+	3067123935	Play_Gladiator_Blue_Slime_Walk			\Default Work Unit\Play_Gladiator_Blue_Slime_Walk	
+	3159234652	Play_Gladiator_Red_Slime_Walk			\Default Work Unit\Play_Gladiator_Red_Slime_Walk	
+	3628850341	Play_Gladiator_Portal_2			\Default Work Unit\Play_Gladiator_Portal_2	
+	3691806113	Play_Enter_Portal			\Default Work Unit\Play_Enter_Portal	
+	3932093680	Play_Gladiator_Attack			\Default Work Unit\Play_Gladiator_Attack	
+	4080083879	Play_Gladiator_Arrow			\Default Work Unit\Play_Gladiator_Arrow	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	108308319	Arena_Song_3_Final	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Arena_Song_3_Final_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Arena Music\Arena_Song_3_Final\Arena_Song_3_Final		9574840
+	135811317	Gladiator_Green Slime_Walk	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Green Slime_Walk_04048E1F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Green Slime_Walk		193252
+	179504539	Gladiator_Red Slime_Walk	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Red Slime_Walk_DCC0AA71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Red Slime_Walk		186712
+	205778581	Arena_LV Up_v1	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Arena_LV Up_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lv Up\Arena_LV Up_v1		244520
+	275732630	Arena_LV Up_v2	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Arena_LV Up_v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lv Up\Arena_LV Up_v2		266140
+	326137936	Gladiator_Death SFX	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Death SFX_163FFE8D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Gladiator_Death SFX		828944
+	382677656	Gladiator_Arena_Clear_Applause	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Arena_Clear_Applause_46AD7508.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arena Clear\Gladiator_Arena_Clear_Applause		1504756
+	526591986	Arena_Song_2_Final	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Arena_Song_2_Final_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Arena Music\Arena_Song_2_Final\Arena_Song_2_Final		14447472
+	588657617	Gladiator_Portal 2	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Portal 2_BA5F6299.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Portal 2		1871460
+	616896709	Arena_Song_1_Final	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Arena_Song_1_Final_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Arena Music\Arena_Song_1_Final\Arena_Song_1_Final		9800892
+	673717449	Gladiator_Spikes	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Spikes_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Spikes		91628
+	679859050	Gladiator_UI_Click	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_UI_Click_9B3B5D58.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_UI_Click		32016
+	701131741	Gladiator_Enter Portal	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Enter Portal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Enter Portal		1136760
+	723824601	Gladiator_Blue Slime_Walk	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Blue Slime_Walk_7F2B1028.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Blue Slime_Walk		198120
+	737690624	Gladiator_Wizard Appears	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Wizard Appears_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Wizard Appears		573188
+	808220897	Gladiator_Boulder	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Boulder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Boulder		280988
+	818301358	main_menu_theme_Final	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\main_menu_theme_Final_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\main_menu_theme_Final\main_menu_theme_Final		5593696
+	835436779	Gladiator_Blue Slime_Attk	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Blue Slime_Attk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Blue Slime_Attk		57768
+	841190942	Gladiator_Red Slime_Attk	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Red Slime_Attk_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Red Slime_Attk		70716
+	874687106	Gladiator_Arena_Clear SFX	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Arena_Clear SFX_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arena Clear\Gladiator_Arena_Clear SFX		705664
+	879262088	Gladiator_Slime_Death	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Slime_Death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Slime_Death		323760
+	936654576	Gladiator_Attack	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Attack _10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Attack		87392
+	965008893	Gladiator_Death_Crowd Loop	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Death_Crowd Loop_3583F14F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Gladiator_Death_Crowd Loop		1100724
+	1013403380	Gladiator_Arrow	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Arrow_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Arrow		47332
+	1048434275	Gladiator_Take Dmg	C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Windows\SFX\Gladiator_Take Dmg_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gladiator_Take Dmg		97192
+

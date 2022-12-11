@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\ameka\OneDrive\Documents\RogueGladiator\RogueGladiator_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="4166460838">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="893465313" Name="Play_Arena_Clear" ObjectPath="\Events\Default Work Unit\Play_Arena_Clear" DurationType="OneShot" DurationMin="8.53" DurationMax="8.53">
+					<IncludedMemoryFiles>
+						<File Id="382677656" Language="SFX">
+							<ShortName>Gladiator_Arena_Clear_Applause.wav</ShortName>
+							<Path>SFX\Gladiator_Arena_Clear_Applause_46AD7508.wem</Path>
+						</File>
+						<File Id="874687106" Language="SFX">
+							<ShortName>Gladiator_Arena_Clear SFX.wav</ShortName>
+							<Path>SFX\Gladiator_Arena_Clear SFX_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2215072691" Name="Play_Arena_Music" ObjectPath="\Events\Default Work Unit\Play_Arena_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="108308319" Language="SFX">
+							<ShortName>Arena_Song_3_Final.wav</ShortName>
+							<Path>SFX\Arena_Song_3_Final_D79FB2B7.wem</Path>
+						</File>
+						<File Id="526591986" Language="SFX">
+							<ShortName>Arena_Song_2_Final.wav</ShortName>
+							<Path>SFX\Arena_Song_2_Final_D79FB2B7.wem</Path>
+						</File>
+						<File Id="616896709" Language="SFX">
+							<ShortName>Arena_Song_1_Final.wav</ShortName>
+							<Path>SFX\Arena_Song_1_Final_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Play_Death" DurationType="OneShot" DurationMin="6.239563" DurationMax="6.239563">
+					<IncludedMemoryFiles>
+						<File Id="326137936" Language="SFX">
+							<ShortName>Gladiator_Death SFX.wav</ShortName>
+							<Path>SFX\Gladiator_Death SFX_163FFE8D.wem</Path>
+						</File>
+						<File Id="965008893" Language="SFX">
+							<ShortName>Gladiator_Death_Crowd Loop.wav</ShortName>
+							<Path>SFX\Gladiator_Death_Crowd Loop_3583F14F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3691806113" Name="Play_Enter_Portal" ObjectPath="\Events\Default Work Unit\Play_Enter_Portal" DurationType="OneShot" DurationMin="6.443855" DurationMax="6.443855">
+					<IncludedMemoryFiles>
+						<File Id="701131741" Language="SFX">
+							<ShortName>Gladiator_Enter Portal.wav</ShortName>
+							<Path>SFX\Gladiator_Enter Portal_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4080083879" Name="Play_Gladiator_Arrow" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Arrow" DurationType="OneShot" DurationMin="0.25292" DurationMax="0.283893">
+					<IncludedMemoryFiles>
+						<File Id="1013403380" Language="SFX">
+							<ShortName>Gladiator_Arrow.wav</ShortName>
+							<Path>SFX\Gladiator_Arrow_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3932093680" Name="Play_Gladiator_Attack" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Attack" DurationType="OneShot" DurationMin="0.467271" DurationMax="0.524494">
+					<IncludedMemoryFiles>
+						<File Id="936654576" Language="SFX">
+							<ShortName>Gladiator_Attack .wav</ShortName>
+							<Path>SFX\Gladiator_Attack _10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1506258188" Name="Play_Gladiator_Blue_Slime_Attk" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Blue_Slime_Attk" DurationType="OneShot" DurationMin="0.30876" DurationMax="0.346572">
+					<IncludedMemoryFiles>
+						<File Id="835436779" Language="SFX">
+							<ShortName>Gladiator_Blue Slime_Attk.wav</ShortName>
+							<Path>SFX\Gladiator_Blue Slime_Attk_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3067123935" Name="Play_Gladiator_Blue_Slime_Walk" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Blue_Slime_Walk" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="723824601" Language="SFX">
+							<ShortName>Gladiator_Blue Slime_Walk.wav</ShortName>
+							<Path>SFX\Gladiator_Blue Slime_Walk_7F2B1028.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2273580211" Name="Play_Gladiator_Boulder" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Boulder" DurationType="OneShot" DurationMin="1.503157" DurationMax="1.687237">
+					<IncludedMemoryFiles>
+						<File Id="808220897" Language="SFX">
+							<ShortName>Gladiator_Boulder.wav</ShortName>
+							<Path>SFX\Gladiator_Boulder_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1806245776" Name="Play_Gladiator_Green_Slime_Walk" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Green_Slime_Walk" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="135811317" Language="SFX">
+							<ShortName>Gladiator_Green Slime_Walk.wav</ShortName>
+							<Path>SFX\Gladiator_Green Slime_Walk_04048E1F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3628850341" Name="Play_Gladiator_Portal_2" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Portal_2" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="588657617" Language="SFX">
+							<ShortName>Gladiator_Portal 2.wav</ShortName>
+							<Path>SFX\Gladiator_Portal 2_BA5F6299.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1685971035" Name="Play_Gladiator_Red_Slime_Attk" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Red_Slime_Attk" DurationType="OneShot" DurationMin="0.400522" DurationMax="0.400522">
+					<IncludedMemoryFiles>
+						<File Id="841190942" Language="SFX">
+							<ShortName>Gladiator_Red Slime_Attk.wav</ShortName>
+							<Path>SFX\Gladiator_Red Slime_Attk_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3159234652" Name="Play_Gladiator_Red_Slime_Walk" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Red_Slime_Walk" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="179504539" Language="SFX">
+							<ShortName>Gladiator_Red Slime_Walk.wav</ShortName>
+							<Path>SFX\Gladiator_Red Slime_Walk_DCC0AA71.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="778926299" Name="Play_Gladiator_Slime_Death" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Slime_Death" DurationType="OneShot" DurationMin="1.835011" DurationMax="1.835011">
+					<IncludedMemoryFiles>
+						<File Id="879262088" Language="SFX">
+							<ShortName>Gladiator_Slime_Death.wav</ShortName>
+							<Path>SFX\Gladiator_Slime_Death_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1927327609" Name="Play_Gladiator_Spikes" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Spikes" DurationType="OneShot" DurationMin="0.489937" DurationMax="0.549936">
+					<IncludedMemoryFiles>
+						<File Id="673717449" Language="SFX">
+							<ShortName>Gladiator_Spikes.wav</ShortName>
+							<Path>SFX\Gladiator_Spikes_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2970769516" Name="Play_Gladiator_Take_Dmg" ObjectPath="\Events\Default Work Unit\Play_Gladiator_Take_Dmg" DurationType="OneShot" DurationMin="0.550612" DurationMax="0.550612">
+					<IncludedMemoryFiles>
+						<File Id="1048434275" Language="SFX">
+							<ShortName>Gladiator_Take Dmg.wav</ShortName>
+							<Path>SFX\Gladiator_Take Dmg_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1445801392" Name="Play_Lv_Up" ObjectPath="\Events\Default Work Unit\Play_Lv_Up" DurationType="OneShot" DurationMin="1.385805" DurationMax="1.385813">
+					<IncludedMemoryFiles>
+						<File Id="205778581" Language="SFX">
+							<ShortName>Arena_LV Up_v1.wav</ShortName>
+							<Path>SFX\Arena_LV Up_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="275732630" Language="SFX">
+							<ShortName>Arena_LV Up_v2.wav</ShortName>
+							<Path>SFX\Arena_LV Up_v2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2415155446" Name="Play_main_menu_theme_Final" ObjectPath="\Events\Default Work Unit\Play_main_menu_theme_Final" DurationType="OneShot" DurationMin="28.5" DurationMax="28.5">
+					<IncludedMemoryFiles>
+						<File Id="818301358" Language="SFX">
+							<ShortName>main_menu_theme_Final.wav</ShortName>
+							<Path>SFX\main_menu_theme_Final_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2044747472" Name="Play_UI" ObjectPath="\Events\Default Work Unit\Play_UI" DurationType="OneShot" DurationMin="0.181143" DurationMax="0.181143">
+					<IncludedMemoryFiles>
+						<File Id="679859050" Language="SFX">
+							<ShortName>Gladiator_UI_Click.wav</ShortName>
+							<Path>SFX\Gladiator_UI_Click_9B3B5D58.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1535286580" Name="Play_Wizard_Appears" ObjectPath="\Events\Default Work Unit\Play_Wizard_Appears" DurationType="OneShot" DurationMin="3.249002" DurationMax="3.249002">
+					<IncludedMemoryFiles>
+						<File Id="737690624" Language="SFX">
+							<ShortName>Gladiator_Wizard Appears.wav</ShortName>
+							<Path>SFX\Gladiator_Wizard Appears_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

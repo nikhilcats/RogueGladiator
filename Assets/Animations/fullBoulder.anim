@@ -90,10 +90,17 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: callEvent
+    data: 
+    objectReferenceParameter: {fileID: 6200978371782180327, guid: d0a599e6e12d64a3298dbdd507a09143, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.5
     functionName: Land
     data: 
-    objectReferenceParameter: {fileID: 6200978371782180327, guid: 7e38f7c2051204ed8aaa3267b58bb068, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

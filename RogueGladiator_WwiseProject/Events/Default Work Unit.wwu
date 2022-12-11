@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Arena_Music" ID="{2A25BBF2-4B72-4CF2-B1D6-36970CB6B46F}">
+					<ChildrenList>
+						<Action Name="" ID="{EF9D5583-79A8-4B75-BCE3-0B1A4D980186}" ShortID="981821096">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arena Music" ID="{AA070C44-83DD-4D56-B96A-390A3A9F0110}" WorkUnitID="{47DA4E4E-6222-4E52-BB53-6A11BC7F5E92}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4D36AA02-F5D7-497F-A0DC-2F022509EBD3}" ShortID="446249952">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main_menu_theme_Final" ID="{488E208B-9B89-4E46-9109-164AFF6EE403}" WorkUnitID="{47DA4E4E-6222-4E52-BB53-6A11BC7F5E92}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_main_menu_theme_Final" ID="{3DE50E6A-D651-43CE-94B7-D76BAF2E7B92}">
+					<ChildrenList>
+						<Action Name="" ID="{AC3B40B8-462E-4883-8302-ACBF23D55DC7}" ShortID="786173847">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main_menu_theme_Final" ID="{488E208B-9B89-4E46-9109-164AFF6EE403}" WorkUnitID="{47DA4E4E-6222-4E52-BB53-6A11BC7F5E92}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI" ID="{12C01C10-6012-494B-A78A-7DE0601F149B}">
+					<ChildrenList>
+						<Action Name="" ID="{4DC905F8-A0D9-4374-B823-49DDE25A471B}" ShortID="510181892">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_UI_Click" ID="{2FF2F52E-5D4C-409A-A933-C568CE6052A4}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Attack" ID="{E89625F9-978A-4CDA-8E20-C2D7850283C7}">
+					<ChildrenList>
+						<Action Name="" ID="{A25717CB-E81A-4128-A132-0C8DAEA75F8D}" ShortID="1004504552">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Attack" ID="{752712FD-5165-4640-9417-158153645386}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Death" ID="{0018F1F7-3CA8-453D-A347-066822B780C6}">
+					<ChildrenList>
+						<Action Name="" ID="{65EDCD28-84E7-4F4B-80E3-1C74535EBF1D}" ShortID="517076862">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{810DD626-BE49-4B49-B9FD-CEACB96F34CD}" ShortID="864532186">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death" ID="{C5F361A9-3422-465A-AA02-6340F666FDAF}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Take_Dmg" ID="{4F6EF104-63D3-470C-83A6-C2A53D918BC5}">
+					<ChildrenList>
+						<Action Name="" ID="{9C4CBB6D-C6CF-4831-B672-DED9B50129FE}" ShortID="18894150">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Take Dmg" ID="{3C443E66-2CED-4D48-BB28-91CDA56B5A86}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Green_Slime_Walk" ID="{4A823AF8-362C-4E68-89CE-86941EA4570A}">
+					<ChildrenList>
+						<Action Name="" ID="{432B8D0F-49B4-4C04-A6CA-2E75BC3F9830}" ShortID="522124783">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Green Slime_Walk" ID="{6BB95E34-F1CA-409F-95C3-47D5AEE79279}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Red_Slime_Walk" ID="{98BC581D-8705-4672-BB50-41F22CDAC455}">
+					<ChildrenList>
+						<Action Name="" ID="{28692AC1-48A7-45C9-BB77-E6B9D6F774C7}" ShortID="346483886">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Red Slime_Walk" ID="{382C1D1F-A06E-476B-BAB9-76587523F13C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Blue_Slime_Walk" ID="{EEF95AD9-395D-491D-BE08-51BFC7A6D999}">
+					<ChildrenList>
+						<Action Name="" ID="{C98CC691-25EC-4C01-B2C2-48D53432A0E4}" ShortID="911349458">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Blue Slime_Walk" ID="{1C454B48-D079-4D5B-AED0-0C4D9CBE09ED}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Red_Slime_Attk" ID="{F5BFCD4A-8EEF-40E7-9EB6-2D5B77131AA7}">
+					<ChildrenList>
+						<Action Name="" ID="{FD15072C-2B44-4716-858D-88CC706472BA}" ShortID="384820780">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Red Slime_Attk" ID="{46C99E74-431D-49DA-B0C8-CBB22A143888}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{02ECA9D5-3AF6-45AB-BEE3-312DF9E440C0}" ShortID="921643882">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Red Slime_Walk" ID="{382C1D1F-A06E-476B-BAB9-76587523F13C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Blue_Slime_Attk" ID="{6725A7D9-DDE0-4A5B-8673-84DE5E59AD0B}">
+					<ChildrenList>
+						<Action Name="" ID="{B369A125-A6C0-48A5-8A4C-79A154B9D796}" ShortID="469791394">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Blue Slime_Attk" ID="{1B090EA9-E476-4834-8A40-4080A7AA4A25}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B7751CB6-E762-4B31-A2DB-C5AB352D7182}" ShortID="300557514">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Blue Slime_Walk" ID="{1C454B48-D079-4D5B-AED0-0C4D9CBE09ED}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Slime_Death" ID="{3803EC5E-2AB3-4AA2-9C3A-64B06AD13421}">
+					<ChildrenList>
+						<Action Name="" ID="{7546453C-FF69-41FB-BCB9-02873A2B9356}" ShortID="100036932">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Slime_Death" ID="{6C35E04E-8C74-46A2-89BA-5EDCDCA38B57}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{85332737-597A-4B0A-B4AC-4D6C726C38C4}" ShortID="803917224">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Red Slime_Walk" ID="{382C1D1F-A06E-476B-BAB9-76587523F13C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{864DE707-F551-4BFB-974D-403D43EFBED1}" ShortID="931685235">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Blue Slime_Walk" ID="{1C454B48-D079-4D5B-AED0-0C4D9CBE09ED}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9E31CDAF-797B-4DE6-89DB-E07B1EEE60F4}" ShortID="1026644523">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Green Slime_Walk" ID="{6BB95E34-F1CA-409F-95C3-47D5AEE79279}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Spikes" ID="{4035CC0B-AA1F-4635-8226-1A8B7A023DBD}">
+					<ChildrenList>
+						<Action Name="" ID="{54BB85BC-DC56-499D-8E36-61510D658C08}" ShortID="919630335">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Spikes" ID="{C6A07514-DBB2-4ED6-B146-1BB645435995}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Boulder" ID="{A973E2D7-9B36-4953-84D9-CD2E2E17AB63}">
+					<ChildrenList>
+						<Action Name="" ID="{7F32A887-95D4-4C53-A9F6-81134FEF5FDE}" ShortID="99858370">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Boulder" ID="{A6BD040D-4EA5-4C09-8010-7CF264AA111C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Arrow" ID="{999B9FC8-F928-4E44-9960-14E221FE67EC}">
+					<ChildrenList>
+						<Action Name="" ID="{B62CAA17-9AA9-425B-B4F7-AB0D46CDA4D5}" ShortID="840084853">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Arrow" ID="{3F2EDE49-F8CE-48FD-8C6D-FA32620F746C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lv_Up" ID="{8C187141-B9F0-4B34-B6F5-0DC3D463D00D}">
+					<ChildrenList>
+						<Action Name="" ID="{729E4C6E-93F7-434F-BB55-DE8F6246A6DA}" ShortID="262866869">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Lv Up" ID="{C692BDAB-6889-44C4-9D2B-894B99019A65}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Arena_Clear" ID="{51E17BDB-4C41-423B-865B-904F38340CFB}">
+					<ChildrenList>
+						<Action Name="" ID="{C2E7441A-CDEB-4468-B2E4-CDE9C6A8A4FF}" ShortID="1013302667">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Arena Clear" ID="{FD7801CC-6538-4C1F-B900-29AB23022E02}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wizard_Appears" ID="{233FB158-F50E-4FBB-AA12-0D15C0BAC5A5}">
+					<ChildrenList>
+						<Action Name="" ID="{6FD83F49-E431-4B5B-90EE-EA643CF09365}" ShortID="620182404">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Wizard Appears" ID="{7F123E32-8BE9-4D1E-B4B7-BF7ABE63D9E1}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Enter_Portal" ID="{8CAD022D-1050-4CD9-A60A-BCDE5EA52682}">
+					<ChildrenList>
+						<Action Name="" ID="{37A27B33-AB24-438B-B134-B24B4CDD4AA5}" ShortID="354255245">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Enter Portal" ID="{04C90637-F33C-4616-8F8A-E55740255D7C}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5FF858E9-E212-488E-BC83-12ACF5AF0AF3}" ShortID="781314582">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Portal 2" ID="{B0F27BE6-EF2D-4D9E-80FB-5B4E7E56F8FD}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gladiator_Portal_2" ID="{FE8D055E-39E1-4464-ADE5-69A1E818E71D}">
+					<ChildrenList>
+						<Action Name="" ID="{DB41D920-31B8-4B37-9417-D3F8DD6848DB}" ShortID="482738689">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gladiator_Portal 2" ID="{B0F27BE6-EF2D-4D9E-80FB-5B4E7E56F8FD}" WorkUnitID="{3B271B31-F1F0-47BD-9426-B9CA29564686}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

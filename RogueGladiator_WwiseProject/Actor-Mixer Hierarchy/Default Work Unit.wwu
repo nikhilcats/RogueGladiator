@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3B271B31-F1F0-47BD-9426-B9CA29564686}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{3B271B31-F1F0-47BD-9426-B9CA29564686}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Gladiator_UI_Click" ID="{2FF2F52E-5D4C-409A-A933-C568CE6052A4}" ShortID="582434591">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_UI_Click" ID="{BAA17281-9118-4514-AD26-199971F8C3EA}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.00807915716429838"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0161583143285968"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.115659513088903"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_UI_Click.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="679859050"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_UI_Click" ID="{BAA17281-9118-4514-AD26-199971F8C3EA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Attack" ID="{752712FD-5165-4640-9417-158153645386}" ShortID="996051049">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E279EC45-4038-408F-AE54-398DE243D045}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Attack" ID="{BD1839C1-00D3-4E14-8875-19343B80C40B}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Attack .wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="936654576"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Attack" ID="{BD1839C1-00D3-4E14-8875-19343B80C40B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="Death" ID="{C5F361A9-3422-465A-AA02-6340F666FDAF}" ShortID="1060988260">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Gladiator_Death SFX" ID="{29BAA718-34A9-422E-AF87-23B39F8B68CB}" ShortID="492458513">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gladiator_Death SFX" ID="{86E374D5-B8FA-4EBC-AD41-393FCDE60F0E}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.93047964396487"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.139651718925118"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.83852132040556"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Gladiator_Death SFX.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="326137936"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Gladiator_Death SFX" ID="{86E374D5-B8FA-4EBC-AD41-393FCDE60F0E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Gladiator_Death_Crowd Loop" ID="{B81B623E-7566-4A0B-8365-509A2ECD0466}" ShortID="644925928">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gladiator_Death_Crowd Loop" ID="{3981DC90-0711-41C3-8A92-EBB5B79EAA31}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.252386816795684"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.04266329137019"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.23956297078218"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Gladiator_Death_Crowd Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="965008893"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Gladiator_Death_Crowd Loop" ID="{3981DC90-0711-41C3-8A92-EBB5B79EAA31}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
+				<Sound Name="Gladiator_Take Dmg" ID="{3C443E66-2CED-4D48-BB28-91CDA56B5A86}" ShortID="632337678">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Take Dmg" ID="{E1B06CD9-59FC-4561-9BF3-BD79F9AB0898}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Take Dmg.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1048434275"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Take Dmg" ID="{E1B06CD9-59FC-4561-9BF3-BD79F9AB0898}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Green Slime_Walk" ID="{6BB95E34-F1CA-409F-95C3-47D5AEE79279}" ShortID="524368390">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BEC01502-8F82-4072-A8F5-6F03E1DD4113}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Green Slime_Walk" ID="{6E2A77A9-1F97-48F1-A8AD-9F462D4E1E72}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.146206896551724"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.0951724137931"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Green Slime_Walk.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="135811317"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Green Slime_Walk" ID="{6E2A77A9-1F97-48F1-A8AD-9F462D4E1E72}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Blue Slime_Walk" ID="{1C454B48-D079-4D5B-AED0-0C4D9CBE09ED}" ShortID="939263736">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FB92FA49-DC4C-4427-8B7C-DFA81924297B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Blue Slime_Walk" ID="{46F28ACF-C76B-4993-8983-4EF425C5A9F1}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.121379310344828"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.12275862068965"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Blue Slime_Walk.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="723824601"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Blue Slime_Walk" ID="{46F28ACF-C76B-4993-8983-4EF425C5A9F1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Red Slime_Walk" ID="{382C1D1F-A06E-476B-BAB9-76587523F13C}" ShortID="848918820">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{5EC7E340-FEBD-42B9-9273-42A97EA0316E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Red Slime_Walk" ID="{0A3D32AC-9A09-4DE5-974C-DE4FD16A5011}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.172638335027498"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.05810592436208"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Red Slime_Walk.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="179504539"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Red Slime_Walk" ID="{0A3D32AC-9A09-4DE5-974C-DE4FD16A5011}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Blue Slime_Attk" ID="{1B090EA9-E476-4834-8A40-4080A7AA4A25}" ShortID="132563249">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FF47D69F-0B97-4DE0-8BEC-934D917E0A61}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Blue Slime_Attk" ID="{02C4FEDC-5653-4353-A883-3E19620294CC}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Blue Slime_Attk.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="835436779"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Blue Slime_Attk" ID="{02C4FEDC-5653-4353-A883-3E19620294CC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Red Slime_Attk" ID="{46C99E74-431D-49DA-B0C8-CBB22A143888}" ShortID="952472276">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Red Slime_Attk" ID="{101E05FC-01C1-40CE-8F44-7A9FE89599E0}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Red Slime_Attk.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="841190942"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Red Slime_Attk" ID="{101E05FC-01C1-40CE-8F44-7A9FE89599E0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Slime_Death" ID="{6C35E04E-8C74-46A2-89BA-5EDCDCA38B57}" ShortID="130932696">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Slime_Death" ID="{15ACF236-4B8D-4DB1-BB77-F1C991BB4D87}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Slime_Death.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="879262088"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Slime_Death" ID="{15ACF236-4B8D-4DB1-BB77-F1C991BB4D87}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Spikes" ID="{C6A07514-DBB2-4ED6-B146-1BB645435995}" ShortID="125760371">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0B4A2CFB-4AD6-44F7-B144-617A3954CABA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Spikes" ID="{1A1B94B8-DA1B-4039-B8F7-CDB6DEDC03EB}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Spikes.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="673717449"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Spikes" ID="{1A1B94B8-DA1B-4039-B8F7-CDB6DEDC03EB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Boulder" ID="{A6BD040D-4EA5-4C09-8010-7CF264AA111C}" ShortID="531220316">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{15E01467-A097-4FC6-BDED-23C2C4CEB86F}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Boulder" ID="{51181578-301A-4A6F-9ABD-F3F71C84F538}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Boulder.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="808220897"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Boulder" ID="{51181578-301A-4A6F-9ABD-F3F71C84F538}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Arrow" ID="{3F2EDE49-F8CE-48FD-8C6D-FA32620F746C}" ShortID="106657156">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F5DC5B3E-F1F7-4343-B41F-2867D4C7AFF5}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6759908D-F664-4A86-B751-189C5ACF4B5F}">
+										<PropertyList>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Arrow" ID="{25638ADE-E940-43C5-A693-1AFCC75914DC}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Arrow.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1013403380"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Arrow" ID="{25638ADE-E940-43C5-A693-1AFCC75914DC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Lv Up" ID="{C692BDAB-6889-44C4-9D2B-894B99019A65}" ShortID="931231243">
+					<PropertyList>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Arena_LV Up_v1" ID="{086085A4-50A5-4321-AF07-C8FB05D1060E}" ShortID="513095122">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arena_LV Up_v1" ID="{AE2F7EE9-54C3-4FE9-AA2F-7FA1AB96248D}">
+									<Language>SFX</Language>
+									<AudioFile>Arena_LV Up_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="205778581"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Arena_LV Up_v1" ID="{AE2F7EE9-54C3-4FE9-AA2F-7FA1AB96248D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arena_LV Up_v2" ID="{F4DA2BA2-67FF-4EC3-A50D-E36E6E065442}" ShortID="901395314">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arena_LV Up_v2" ID="{BBB36E84-19DD-4D6C-A223-7E556EDF3D7C}">
+									<Language>SFX</Language>
+									<AudioFile>Arena_LV Up_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="275732630"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Arena_LV Up_v2" ID="{BBB36E84-19DD-4D6C-A223-7E556EDF3D7C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<BlendContainer Name="Arena Clear" ID="{FD7801CC-6538-4C1F-B900-29AB23022E02}" ShortID="314757680">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Gladiator_Arena_Clear SFX" ID="{0DB20E48-1775-40A0-9244-FAEEFAB13E3F}" ShortID="1072227394">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gladiator_Arena_Clear SFX" ID="{35CC8AE8-12B3-495A-BBD1-1F9E6D049E26}">
+									<Language>SFX</Language>
+									<AudioFile>Gladiator_Arena_Clear SFX.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="874687106"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Gladiator_Arena_Clear SFX" ID="{35CC8AE8-12B3-495A-BBD1-1F9E6D049E26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Gladiator_Arena_Clear_Applause" ID="{84DE794D-7957-4D11-B3ED-393CE3C25F8A}" ShortID="100724101">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gladiator_Arena_Clear_Applause" ID="{807AB6AB-5365-47AB-A903-F2830AC68346}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.35648997134671"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Gladiator_Arena_Clear_Applause.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="382677656"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Gladiator_Arena_Clear_Applause" ID="{807AB6AB-5365-47AB-A903-F2830AC68346}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</BlendContainer>
+				<Sound Name="Gladiator_Wizard Appears" ID="{7F123E32-8BE9-4D1E-B4B7-BF7ABE63D9E1}" ShortID="136830308">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Wizard Appears" ID="{24F35AD6-D9F2-4520-BB86-1996C8529E4D}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Wizard Appears.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="737690624"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Wizard Appears" ID="{24F35AD6-D9F2-4520-BB86-1996C8529E4D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Enter Portal" ID="{04C90637-F33C-4616-8F8A-E55740255D7C}" ShortID="48519542">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Enter Portal" ID="{D1C95C64-F7EA-4506-BE85-A0894D17EBB3}">
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Enter Portal.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="701131741"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Enter Portal" ID="{D1C95C64-F7EA-4506-BE85-A0894D17EBB3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Gladiator_Portal 2" ID="{B0F27BE6-EF2D-4D9E-80FB-5B4E7E56F8FD}" ShortID="705796937">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B655D2D3-8F51-4247-BDF8-B4988B588691}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{ABF30BF5-94BB-4713-93F2-FEC4E4D1C180}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Gladiator_Portal 2" ID="{BB44C234-E535-45B4-BEC3-212592D94498}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.105690750606705"/>
+								<Property Name="LoopEnd" Type="Real64" Value="10.6931996112195"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.0952168924384731"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Gladiator_Portal 2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="588657617"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Gladiator_Portal 2" ID="{BB44C234-E535-45B4-BEC3-212592D94498}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

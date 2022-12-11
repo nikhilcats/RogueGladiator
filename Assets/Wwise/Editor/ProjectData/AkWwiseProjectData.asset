@@ -1,0 +1,500 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825e36f958643174ca28f8ecbb163531, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 5c7b2c453992b543ae2b17b02098b493
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 5c7b2c453992b543ae2b17b02098b493
+    GuidInternal: 
+    m_lastTime: -8585308745707230378
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f50bf3abbb94134793f2fec4e4d1c180
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: f50bf3abbb94134793f2fec4e4d1c180
+    GuidInternal: 
+    m_lastTime: -8585308745708469122
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f50bf3abbb94134793f2fec4e4d1c180
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ef061fcb3c43f1428d61601c13be4e7b
+    ParentPath: SoundBanks\Default Work Unit
+    guid: ef061fcb3c43f1428d61601c13be4e7b
+    GuidInternal: 
+    m_lastTime: -8585308711747685107
+    List:
+    - name: Main
+      guid: d3ce531bbbc7c248aa902dee8a4cdfc6
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ef061fcb3c43f1428d61601c13be4e7b
+      - ElementName: Main
+        ObjectType: 7
+        guid: d3ce531bbbc7c248aa902dee8a4cdfc6
+      Path: SoundBanks\Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ea03c913a056814da76f21edc1b30334
+    ParentPath: Events\Default Work Unit
+    guid: ea03c913a056814da76f21edc1b30334
+    GuidInternal: 
+    m_lastTime: -8585308696260724176
+    List:
+    - name: Play_Arena_Clear
+      guid: db7be151414c3b42865b904f38340cfb
+      id: 893465313
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Arena_Clear
+        ObjectType: 3
+        guid: db7be151414c3b42865b904f38340cfb
+      Path: Events\Default Work Unit\Play_Arena_Clear
+      maxAttenuation: 0
+      maxDuration: 8.53
+      minDuration: 8.53
+    - name: Play_Arena_Music
+      guid: f2bb252a724bf24cb1d636970cb6b46f
+      id: 2215072691
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Arena_Music
+        ObjectType: 3
+        guid: f2bb252a724bf24cb1d636970cb6b46f
+      Path: Events\Default Work Unit\Play_Arena_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Death
+      guid: f7f11800a83c3d45a347066822b780c6
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Death
+        ObjectType: 3
+        guid: f7f11800a83c3d45a347066822b780c6
+      Path: Events\Default Work Unit\Play_Death
+      maxAttenuation: 0
+      maxDuration: 6.239563
+      minDuration: 6.239563
+    - name: Play_Enter_Portal
+      guid: 2d02ad8c5010d94ca60abcde5ea52682
+      id: 3691806113
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Enter_Portal
+        ObjectType: 3
+        guid: 2d02ad8c5010d94ca60abcde5ea52682
+      Path: Events\Default Work Unit\Play_Enter_Portal
+      maxAttenuation: 0
+      maxDuration: 6.443855
+      minDuration: 6.443855
+    - name: Play_Gladiator_Arrow
+      guid: c89f9b9928f9444e996014e221fe67ec
+      id: 4080083879
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Arrow
+        ObjectType: 3
+        guid: c89f9b9928f9444e996014e221fe67ec
+      Path: Events\Default Work Unit\Play_Gladiator_Arrow
+      maxAttenuation: 0
+      maxDuration: 0.283893
+      minDuration: 0.25292
+    - name: Play_Gladiator_Attack
+      guid: f92596e88a97da4c8e20c2d7850283c7
+      id: 3932093680
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Attack
+        ObjectType: 3
+        guid: f92596e88a97da4c8e20c2d7850283c7
+      Path: Events\Default Work Unit\Play_Gladiator_Attack
+      maxAttenuation: 0
+      maxDuration: 0.524494
+      minDuration: 0.467271
+    - name: Play_Gladiator_Blue_Slime_Attk
+      guid: d9a72567e0dd5b4a867384de5e59ad0b
+      id: 1506258188
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Blue_Slime_Attk
+        ObjectType: 3
+        guid: d9a72567e0dd5b4a867384de5e59ad0b
+      Path: Events\Default Work Unit\Play_Gladiator_Blue_Slime_Attk
+      maxAttenuation: 0
+      maxDuration: 0.346572
+      minDuration: 0.30876
+    - name: Play_Gladiator_Blue_Slime_Walk
+      guid: d95af9ee5d391d49be0851bfc7a6d999
+      id: 3067123935
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Blue_Slime_Walk
+        ObjectType: 3
+        guid: d95af9ee5d391d49be0851bfc7a6d999
+      Path: Events\Default Work Unit\Play_Gladiator_Blue_Slime_Walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Gladiator_Boulder
+      guid: d7e273a9369b534984d9cd2e2e17ab63
+      id: 2273580211
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Boulder
+        ObjectType: 3
+        guid: d7e273a9369b534984d9cd2e2e17ab63
+      Path: Events\Default Work Unit\Play_Gladiator_Boulder
+      maxAttenuation: 0
+      maxDuration: 1.687237
+      minDuration: 1.503157
+    - name: Play_Gladiator_Green_Slime_Walk
+      guid: f83a824a2c36684e89ce86941ea4570a
+      id: 1806245776
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Green_Slime_Walk
+        ObjectType: 3
+        guid: f83a824a2c36684e89ce86941ea4570a
+      Path: Events\Default Work Unit\Play_Gladiator_Green_Slime_Walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Gladiator_Portal_2
+      guid: 5e058dfee1396444ade569a1e818e71d
+      id: 3628850341
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Portal_2
+        ObjectType: 3
+        guid: 5e058dfee1396444ade569a1e818e71d
+      Path: Events\Default Work Unit\Play_Gladiator_Portal_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Gladiator_Red_Slime_Attk
+      guid: 4acdbff5ef8ee7409eb62d5b77131aa7
+      id: 1685971035
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Red_Slime_Attk
+        ObjectType: 3
+        guid: 4acdbff5ef8ee7409eb62d5b77131aa7
+      Path: Events\Default Work Unit\Play_Gladiator_Red_Slime_Attk
+      maxAttenuation: 0
+      maxDuration: 0.400522
+      minDuration: 0.400522
+    - name: Play_Gladiator_Red_Slime_Walk
+      guid: 1d58bc9805877246bb5041f22cdac455
+      id: 3159234652
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Red_Slime_Walk
+        ObjectType: 3
+        guid: 1d58bc9805877246bb5041f22cdac455
+      Path: Events\Default Work Unit\Play_Gladiator_Red_Slime_Walk
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Gladiator_Slime_Death
+      guid: 5eec0338b32aa24a9c3a64b06ad13421
+      id: 778926299
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Slime_Death
+        ObjectType: 3
+        guid: 5eec0338b32aa24a9c3a64b06ad13421
+      Path: Events\Default Work Unit\Play_Gladiator_Slime_Death
+      maxAttenuation: 0
+      maxDuration: 1.835011
+      minDuration: 1.835011
+    - name: Play_Gladiator_Spikes
+      guid: 0bcc35401faa354682261a8b7a023dbd
+      id: 1927327609
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Spikes
+        ObjectType: 3
+        guid: 0bcc35401faa354682261a8b7a023dbd
+      Path: Events\Default Work Unit\Play_Gladiator_Spikes
+      maxAttenuation: 0
+      maxDuration: 0.549936
+      minDuration: 0.489937
+    - name: Play_Gladiator_Take_Dmg
+      guid: 04f16e4fd3630c4783a6c2a53d918bc5
+      id: 2970769516
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Gladiator_Take_Dmg
+        ObjectType: 3
+        guid: 04f16e4fd3630c4783a6c2a53d918bc5
+      Path: Events\Default Work Unit\Play_Gladiator_Take_Dmg
+      maxAttenuation: 0
+      maxDuration: 0.550612
+      minDuration: 0.550612
+    - name: Play_Lv_Up
+      guid: 4171188cf0b9344bb6f50dc3d463d00d
+      id: 1445801392
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Lv_Up
+        ObjectType: 3
+        guid: 4171188cf0b9344bb6f50dc3d463d00d
+      Path: Events\Default Work Unit\Play_Lv_Up
+      maxAttenuation: 0
+      maxDuration: 1.385813
+      minDuration: 1.385805
+    - name: Play_main_menu_theme_Final
+      guid: 6a0ee53d51d6ce4394b7d76baf2e7b92
+      id: 2415155446
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_main_menu_theme_Final
+        ObjectType: 3
+        guid: 6a0ee53d51d6ce4394b7d76baf2e7b92
+      Path: Events\Default Work Unit\Play_main_menu_theme_Final
+      maxAttenuation: 0
+      maxDuration: 28.5
+      minDuration: 28.5
+    - name: Play_UI
+      guid: 101cc01212604b49a78a7de0601f149b
+      id: 2044747472
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_UI
+        ObjectType: 3
+        guid: 101cc01212604b49a78a7de0601f149b
+      Path: Events\Default Work Unit\Play_UI
+      maxAttenuation: 0
+      maxDuration: 0.181143
+      minDuration: 0.181143
+    - name: Play_Wizard_Appears
+      guid: 58b13f230ef5bb4faa120d15c0bac5a5
+      id: 1535286580
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ea03c913a056814da76f21edc1b30334
+      - ElementName: Play_Wizard_Appears
+        ObjectType: 3
+        guid: 58b13f230ef5bb4faa120d15c0bac5a5
+      Path: Events\Default Work Unit\Play_Wizard_Appears
+      maxAttenuation: 0
+      maxDuration: 3.249002
+      minDuration: 3.249002
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 12a547581105f04e968d241ba59829f5
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 12a547581105f04e968d241ba59829f5
+    GuidInternal: 
+    m_lastTime: -8585308745709558021
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 3da8a27f2cf85e408b923a128a556c43
+    ParentPath: States\Default Work Unit
+    guid: 3da8a27f2cf85e408b923a128a556c43
+    GuidInternal: 
+    m_lastTime: -8585308745707739879
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ecdecb84a44c734b8d4c0fc256a55f4e
+    ParentPath: Switches\Default Work Unit
+    guid: ecdecb84a44c734b8d4c0fc256a55f4e
+    GuidInternal: 
+    m_lastTime: -8585308745709128322
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: faf23e2f69f3c244ba9d0798056023f9
+    ParentPath: Triggers\Default Work Unit
+    guid: faf23e2f69f3c244ba9d0798056023f9
+    GuidInternal: 
+    m_lastTime: -8585308745707939490
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000001e0000001f000000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

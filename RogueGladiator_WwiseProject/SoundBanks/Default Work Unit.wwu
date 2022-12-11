@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CB1F06EF-433C-42F1-8D61-601C13BE4E7B}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{CB1F06EF-433C-42F1-8D61-601C13BE4E7B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{1B53CED3-C7BB-48C2-AA90-2DEE8A4CDFC6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Gladiator_Red_Slime_Attk" ID="{F5BFCD4A-8EEF-40E7-9EB6-2D5B77131AA7}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Arena_Clear" ID="{51E17BDB-4C41-423B-865B-904F38340CFB}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_main_menu_theme_Final" ID="{3DE50E6A-D651-43CE-94B7-D76BAF2E7B92}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Portal_2" ID="{FE8D055E-39E1-4464-ADE5-69A1E818E71D}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Death" ID="{0018F1F7-3CA8-453D-A347-066822B780C6}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Spikes" ID="{4035CC0B-AA1F-4635-8226-1A8B7A023DBD}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Red_Slime_Walk" ID="{98BC581D-8705-4672-BB50-41F22CDAC455}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Take_Dmg" ID="{4F6EF104-63D3-470C-83A6-C2A53D918BC5}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Blue_Slime_Walk" ID="{EEF95AD9-395D-491D-BE08-51BFC7A6D999}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UI" ID="{12C01C10-6012-494B-A78A-7DE0601F149B}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Boulder" ID="{A973E2D7-9B36-4953-84D9-CD2E2E17AB63}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Blue_Slime_Attk" ID="{6725A7D9-DDE0-4A5B-8673-84DE5E59AD0B}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Slime_Death" ID="{3803EC5E-2AB3-4AA2-9C3A-64B06AD13421}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Lv_Up" ID="{8C187141-B9F0-4B34-B6F5-0DC3D463D00D}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Enter_Portal" ID="{8CAD022D-1050-4CD9-A60A-BCDE5EA52682}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Attack" ID="{E89625F9-978A-4CDA-8E20-C2D7850283C7}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Arena_Music" ID="{2A25BBF2-4B72-4CF2-B1D6-36970CB6B46F}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Arrow" ID="{999B9FC8-F928-4E44-9960-14E221FE67EC}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Gladiator_Green_Slime_Walk" ID="{4A823AF8-362C-4E68-89CE-86941EA4570A}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Wizard_Appears" ID="{233FB158-F50E-4FBB-AA12-0D15C0BAC5A5}" WorkUnitID="{13C903EA-56A0-4D81-A76F-21EDC1B30334}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
