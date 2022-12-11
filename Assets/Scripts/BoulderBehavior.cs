@@ -37,16 +37,13 @@ public class BoulderBehavior : MonoBehaviour
   //handle when boulder hits ground
   public void Land()
   {
-    Debug.Log("boulder landing");
     //turn isTrigger off
     this.GetComponent<Collider2D>().isTrigger = false;
     //check if player inside box
     Collider2D playerBox = player.GetComponent<Collider2D>();
-    Collider2D boulderBox = GetComponent<Collider2D>();
-    Debug.Log(playerBox.bounds.Intersects(boulderBox.bounds));
+    Collider2D boulderBox = this.GetComponent<Collider2D>();
     if (playerBox.bounds.Intersects(boulderBox.bounds))
     {
-      Debug.Log("TOOK DAMAGE");
       component.TakeDamage(damage);
     }
   }

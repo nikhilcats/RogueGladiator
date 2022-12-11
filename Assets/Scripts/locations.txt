@@ -14,7 +14,6 @@ We want all this in 16:9
 
 LIST OF OBJECTS:
 Arena Scene
-  Canvas                             //main canvas
   Pause Canvas
     translucent
     PauseText

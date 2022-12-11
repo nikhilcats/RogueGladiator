@@ -35,8 +35,11 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
   {
     if (armed)
     {
-      Debug.Log(string.Format("haha idiot you stepped in the KNIFE PILE and took {0} damage!", damage));
-      component.TakeDamage(damage);
+      if (other == player.GetComponent<Collider2D>())
+      {
+        Debug.Log(string.Format("haha idiot you stepped in the KNIFE PILE and took {0} damage!", damage));
+        component.TakeDamage(damage);
+      }
     }
   }
 
