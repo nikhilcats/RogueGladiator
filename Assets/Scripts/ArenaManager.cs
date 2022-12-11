@@ -10,6 +10,9 @@ public class ArenaManager : MonoBehaviour
   public int rangedEnemyAmt;
   public int spikeTrapAmt;
   public double boulderFreq;
+  public string gameState = "fight";
+  public GameObject portal1;
+  public GameObject portal2;
 
   //GameManager reference
   private GameObject gameManager;
@@ -31,7 +34,18 @@ public class ArenaManager : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-
+    //check game state and change when needed
+    if (gameState == "portal")
+    {
+      //spawn portals
+      portal1.gameObject.SetActive(true);
+      portal2.gameObject.SetActive(true);
+      //deactivate traps
+      GameObject.Find("Enemyground").GetComponent<TrapManager>().Disarm();
+      //stop boulder spawning
+      GameObject.Find("Enemyground").GetComponent<TrapManager>().StopBoulders();
+      gameState = "fight";
+    }
   }
 
   public void SetupScene(int floor)
