@@ -16,12 +16,12 @@ public class Enemy : MovingObject
         base.Start();
     }
 
-    protected virtual void Update()
+    protected override void Update()
     {
 
     }
 
-    protected virtual void FixedUpdate()
+    protected override void FixedUpdate()
     {
 
     }

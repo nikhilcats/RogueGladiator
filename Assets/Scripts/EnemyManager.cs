@@ -1,37 +1,49 @@
 using UnityEngine;
 using System;
-using System.Collections.Generic;         //Allows us to use Lists.
+using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
-    //arena setup parameters
-    private int walkEnemyAmt;
-
-    public CompositeCollider2D compositeCollider;
+    public CompositeCollider2D spawnBoundary;
     public List<GameObject> enemies;
-    public GameObject Enemy1;
+    private int walkEnemyAmt;
     private ArenaManager arenaManager;
+
+    // Enemy prefabs
+    public GameObject Enemy1;
+    public GameObject Enemy2;
+    public GameObject Enemy3;
+
+    private GameObject whichEnemy;
 
     void Start()
     {
         arenaManager = transform.parent.GetComponent<ArenaManager>();
-        compositeCollider = gameObject.GetComponent<CompositeCollider2D>();
+        spawnBoundary = gameObject.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
-        spawnEnemies();
+        spawnEnemy(5, "chalay");
+        spawnEnemy(5, "paddy");
+        spawnEnemy(5, "salem");
     }
 
-    private void spawnEnemies()
+    private void spawnEnemy(int numberOfEnemies, string enemyName)
     {
+        if (enemyName == "chalay")
+            whichEnemy = Enemy1;
+        else if (enemyName == "paddy")
+            whichEnemy = Enemy2;
+        else if (enemyName == "salem")
+            whichEnemy = Enemy3;
+
         walkEnemyAmt = arenaManager.walkEnemyAmt;
-        //Vector2[] cornerPoints = polygonCollider.points;
         int i = 0;
         double delta = 0.5;
         while (i < walkEnemyAmt)
         {
-            Vector3 rndPoint3D = RandomPointInBounds(compositeCollider.bounds, 1f);
+            Vector3 rndPoint3D = RandomPointInBounds(spawnBoundary.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
-            Vector2 rndPointInside = compositeCollider.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
+            Vector2 rndPointInside = spawnBoundary.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
             if (rndPointInside.x == rndPoint2D.x && rndPointInside.y == rndPoint2D.y)
             {
                 Debug.Log("Entered if statement branch with i=" + i);
@@ -44,7 +56,7 @@ public class EnemyManager : MonoBehaviour
                         goto tryAgain;
                     }
                 }
-                GameObject newEnemy = Instantiate(Enemy1, rndPoint2D, Quaternion.identity);
+                GameObject newEnemy = Instantiate(whichEnemy, rndPoint2D, Quaternion.identity);
                 newEnemy.transform.parent = this.transform;
                 enemies.Add(newEnemy);
                 Debug.Log("new enemy position: " + rndPoint2D.x + ", " + rndPoint2D.y);
