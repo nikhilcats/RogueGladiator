@@ -14,7 +14,7 @@ public class Player: MovingObject
     private GameObject gameManager;
     private GameManager gManagerScript;
     private Vector3 localScale;
-    public Animator animator;
+    private Animator animator;
 
 
     protected override void Start()
@@ -23,6 +23,7 @@ public class Player: MovingObject
       gManagerScript = gameManager.GetComponent<GameManager>();
       health = gManagerScript.playerMaxHealth;
       healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
+      animator = this.GetComponent<Animator>();
       moveSpeed = 5f;
       updateHealthText();
       base.Start();
