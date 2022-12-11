@@ -1,12 +1,14 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using Random = UnityEngine.Random; 
+using Random = UnityEngine.Random;
 
 public class EnemyManager : MonoBehaviour
 {
     public CompositeCollider2D spawnBoundary;
     public List<GameObject> enemies;
+    private int walkEnemyAmt;
+    private ArenaManager arenaManager;
 
     // Enemy prefabs
     public GameObject Enemy1;
@@ -17,6 +19,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start()
     {
+        arenaManager = transform.parent.GetComponent<ArenaManager>();
         spawnBoundary = gameObject.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
         spawnEnemy(5, "chalay");
@@ -33,9 +36,10 @@ public class EnemyManager : MonoBehaviour
         else if (enemyName == "salem")
             whichEnemy = Enemy3;
 
+        walkEnemyAmt = arenaManager.walkEnemyAmt;
         int i = 0;
         double delta = 0.5;
-        while (i < numberOfEnemies)
+        while (i < walkEnemyAmt)
         {
             Vector3 rndPoint3D = RandomPointInBounds(spawnBoundary.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
