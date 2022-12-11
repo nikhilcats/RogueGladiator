@@ -11,7 +11,7 @@ public class TrapManager : MonoBehaviour
 
     private ArenaManager arenaManager;
     private float time = 0f;
-    private float frequency = 0;
+    private float frequency;
     private int chance;
     private bool sometimesBoulderSticks = false;
     public CompositeCollider2D compositeCollider;
@@ -30,7 +30,12 @@ public class TrapManager : MonoBehaviour
       {
         frequency = (float)1/(float)boulderFreq;
       }
+      else
+      {
+        frequency = 0;
+      }
       spawnSpikeTraps();
+      Arm();
     }
 
     void Update()
@@ -138,5 +143,12 @@ public class TrapManager : MonoBehaviour
         trapAnim.Play("spikeDisarm");
         Debug.Log("trap disarmed");
       }
+    }
+
+    //stop boulder spawning
+    public void StopBoulders()
+    {
+      frequency = 0;
+      Debug.Log("boulders stopped");
     }
 }

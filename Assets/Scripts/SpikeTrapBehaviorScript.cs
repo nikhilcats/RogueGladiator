@@ -17,12 +17,6 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
 
   void Update()
   {
-    //disable traps if game state no longer allows
-    bool inPlay = true; //placeholder for game state decision
-    if (!inPlay)
-    {
-      DisarmTrap();
-    }
     //set new player on arena update
     if (!player)
     {
@@ -33,12 +27,18 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D other)
   {
+    //check if traps activated
     if (armed)
     {
-      if (other == player.GetComponent<Collider2D>())
+      //check if player object is set
+      if (player)
       {
-        Debug.Log(string.Format("haha idiot you stepped in the KNIFE PILE and took {0} damage!", damage));
-        component.TakeDamage(damage);
+        //check if player object is the object colliding
+        if (other == player.GetComponent<Collider2D>())
+        {
+          Debug.Log(string.Format("haha idiot you stepped in the KNIFE PILE and took {0} damage!", damage));
+          component.TakeDamage(damage);
+        }
       }
     }
   }

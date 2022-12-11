@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
   private string seed;
   private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f);
   private CameraMovementScript camScript;
+  private string gameState;
 
   //arena setup parameters
   public int walkEnemyAmt;
@@ -78,6 +79,20 @@ public class GameManager : MonoBehaviour
     arenaManagerObj.transform.parent = this.transform;
     arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
   }
+
+
+
+
+
+
+  public void setArenaGameStatePortal()
+  {
+    arenaManager.gameState = "portal";
+  }
+
+
+
+
 
 /*
   //this is called only once, and the parameter tells it to be called only after the scene was loaded
