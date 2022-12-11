@@ -5,12 +5,11 @@ using UnityEngine;
 public class SpikeTrapBehaviorScript : MonoBehaviour
 {
     public int damage = 5;
-    GameObject player;
     Player component;
 
     void Start()
     {
-      player = GameObject.Find("Player");
+      GameObject player = GameObject.Find("/GameManager/Playerground/Player");
       component = player.GetComponent<Player>();
     }
 
