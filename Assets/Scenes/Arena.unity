@@ -3758,8 +3758,8 @@ MonoBehaviour:
   walkEnemyAmt: 0
   jumpEnemyAmt: 0
   rangedEnemyAmt: 0
-  spikeTrapAmt: 5
-  boulderFreq: 0
+  spikeTrapAmt: 2
+  boulderFreq: 1
   playerLevel: 1
   playerHealth: 100
   playerMaxHealth: 102

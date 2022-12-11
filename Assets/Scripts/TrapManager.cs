@@ -58,7 +58,6 @@ public class TrapManager : MonoBehaviour
       //run boulder behavior method
       BoulderBehavior behavior = newBoulder.GetComponent<BoulderBehavior>();
       behavior.DropBoulder();
-      Debug.Log("boulder dropped");
       //handle random chance of boulder sticking around
       if (sometimesBoulderSticks)
       {
