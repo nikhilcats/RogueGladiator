@@ -18,7 +18,7 @@ public class Player: MovingObject
     public Transform attackPointUp;
     public Transform attackPointLeft;
     public Transform attackPointRight;
-    public float attackRange = 0.5f;
+    public float attackRange = 0.9f;
     public LayerMask enemyLayers;
     private Transform attackPoint;
     private float timeSinceLastHit;
@@ -87,17 +87,17 @@ public class Player: MovingObject
         base.FixedUpdate();
     }
 
-    void Attack()
+    public void Attack()
     {
         animator.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            Vector2 dir = (enemy.transform.position - transform.position).normalized;
-            Vector2 knockback = dir * knockbackForce;
-            enemy.gameObject.GetComponent<Enemy1>().TakeDamage(damage, knockback);
+            if (enemy.name == "Enemy1(Clone)")
+                enemy.gameObject.GetComponent<Enemy1>().TakeDamage(damage);
+            else if (enemy.name == "Enemy2(Clone)")
+                enemy.gameObject.GetComponent<Enemy2>().TakeDamage(damage);
         }
     }
 

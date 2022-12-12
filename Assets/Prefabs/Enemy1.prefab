@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45118a1b33b758489febc2b998221fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToNextTurn: 3
-  moveDuration: 2
+  damage: 4
+  health: 6
+  moveSpeed: 3
 --- !u!50 &5646542732493868323
 Rigidbody2D:
   serializedVersion: 4
@@ -114,7 +115,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
