@@ -12,12 +12,14 @@ public class Enemy1 : MovingObject
     private float enemyName;
     private GameObject player;
     private Animator animator;
+    private Rigidbody2D rb2D;
 
     protected override void Start()
     {
         base.Start();
         player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
         animator = GetComponent<Animator>();
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
     protected override void Update()
@@ -40,9 +42,11 @@ public class Enemy1 : MovingObject
         base.FixedUpdate();
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Vector2 knockback)
     {
         health -= amount;
+        if (rb2D != null)
+            rb2D.AddForce(knockback, ForceMode2D.Impulse);
         if (health < 0)
         {
             Debug.Log("It's time to die.");
@@ -50,6 +54,19 @@ public class Enemy1 : MovingObject
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.SendMessage("TakeDamage", damage);
+        }
+    }
+
+    void Attack()
+    {
+        
+    }
+    
     public void SlimeDeath()
     {
       UnityEngine.GameObject.Destroy(this.gameObject);
