@@ -12,7 +12,6 @@ public class Enemy1 : MovingObject
     private float enemyName;
     private GameObject player;
     private Animator animator;
-    private Rigidbody2D rb2D;
     private EnemyManager enemyManager;
     private GameManager gameManager;
     private int pointValue = 100;     //how many points this enemy is worth
@@ -24,7 +23,6 @@ public class Enemy1 : MovingObject
         enemyManager = GameObject.Find("GameManager/ArenaManager(Clone)/Enemyground").GetComponent<EnemyManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
-        rb2D = GetComponent<Rigidbody2D>();
     }
 
     protected override void Update()
