@@ -92,6 +92,7 @@ public class EnemyManager : MonoBehaviour
     {
       foreach (GameObject enemy in enemies)
       {
+        enemies.Remove(enemy);
         UnityEngine.Object.Destroy(enemy);
       }
     }

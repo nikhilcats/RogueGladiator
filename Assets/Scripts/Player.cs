@@ -21,6 +21,7 @@ public class Player: MovingObject
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     private Transform attackPoint;
+    private float timeSinceLastHit;
 
     protected override void Start()
     {
@@ -55,7 +56,7 @@ public class Player: MovingObject
         velocity.Normalize();
         velocity *= moveSpeed;
 
-        if (velocity.x > 0) 
+        if (velocity.x > 0)
         {
             attackPoint = attackPointRight;
         }
@@ -76,6 +77,9 @@ public class Player: MovingObject
         {
             Attack();
         }
+
+        //calculate time for iframes
+        timeSinceLastHit += Time.deltaTime;
     }
 
     protected override void FixedUpdate()
@@ -107,17 +111,22 @@ public class Player: MovingObject
 
     public void TakeDamage(int amount)
     {
-      health -= amount;
-      if (health <= 0)
-      {
-        health = 0;
-        //player death
-        gManagerScript.Die();
+      //i frames
+      if (timeSinceLastHit > 0.5f) {
+        timeSinceLastHit = 0;
+        health -= amount;
+        if (health <= 0)
+        {
+          health = 0;
+          //player death
+          gManagerScript.Die();
+        }
+        //update game manager player health
+        gManagerScript.playerHealth = health;
+        updateHealthText();
+        Debug.Log("my health is down to " + health);
       }
-      //update game manager player health
-      gManagerScript.playerHealth = health;
-      updateHealthText();
-      Debug.Log("my health is down to " + health);
+
     }
 
     void updateHealthText()
