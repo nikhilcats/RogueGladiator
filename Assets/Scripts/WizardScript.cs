@@ -21,7 +21,6 @@ public class WizardScript : MonoBehaviour
     //shit dont work
     public void CastSpell()
     {
-      Debug.Log("MADE IT HERE");
       //ArenaManager arenaManager = GameObject.Find("ArenaManager(Clone)").GetComponent<ArenaManager>();
       //arenaManager.SpawnPortals();
     }
