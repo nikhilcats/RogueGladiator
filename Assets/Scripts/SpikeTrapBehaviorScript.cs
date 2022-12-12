@@ -8,6 +8,7 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
   private GameObject player;
   private Player component;
   bool armed = true;
+  public AudioClip spikeNoise;
 
   void Start()
   {
@@ -44,11 +45,17 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
 
   public void ArmTrap()
   {
+    this.GetComponent<AudioSource>().volume = 0.2f;
+    this.GetComponent<AudioSource>().clip = spikeNoise;
+    this.GetComponent<AudioSource>().Play();
     armed = true;
   }
 
   public void DisarmTrap()
   {
+    this.GetComponent<AudioSource>().volume = 0.2f;
+    this.GetComponent<AudioSource>().clip = spikeNoise;
+    this.GetComponent<AudioSource>().Play();
     armed = false;
   }
 }
