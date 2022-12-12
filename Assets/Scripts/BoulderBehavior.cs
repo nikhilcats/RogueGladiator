@@ -39,6 +39,7 @@ public class BoulderBehavior : MonoBehaviour
   {
     //turn isTrigger off
     //check if player inside box
+    //change render layer to under player/enemies but not spike or portal
     Collider2D playerBox = player.GetComponent<Collider2D>();
     Collider2D boulderBox = this.GetComponent<Collider2D>();
     Debug.Log(playerBox.bounds);
@@ -47,5 +48,6 @@ public class BoulderBehavior : MonoBehaviour
       component.TakeDamage(damage);
     }
     this.GetComponent<Collider2D>().isTrigger = false;
+    this.GetComponent<SpriteRenderer>().sortingOrder = 3;
   }
 }

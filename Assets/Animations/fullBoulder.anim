@@ -93,7 +93,7 @@ AnimationClip:
   - time: 0.5
     functionName: Land
     data: 
-    objectReferenceParameter: {fileID: 6200978371782180327, guid: 7e38f7c2051204ed8aaa3267b58bb068, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
