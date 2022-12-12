@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a64b72ceeec72b04c8837f9d61d439f2
+guid: a690c5d100752e64896790312e2e0780
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_0
+      name: Slime_Blue_Walk_Up_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55358116b6f53294dbe9789918bbdefd
-      internalID: -860803198
+      spriteID: 78800ce2d98669f4eab306e02b51b53d
+      internalID: -1281527150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_1
+      name: Slime_Blue_Walk_Up_1
       rect:
         serializedVersion: 2
         x: 100
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0ebffcf2d5f8e84583d442c9e5f7376
-      internalID: -439004527
+      spriteID: c2c1d25c51994d6419c7b5988b49db9b
+      internalID: 470096524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_2
+      name: Slime_Blue_Walk_Up_2
       rect:
         serializedVersion: 2
         x: 200
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a1b319a09f7e4f4681d246c1f34fec2
-      internalID: -85554718
+      spriteID: 1da240cfdb42856419ec5e70b161e3b4
+      internalID: -1370167194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_3
+      name: Slime_Blue_Walk_Up_3
       rect:
         serializedVersion: 2
         x: 300
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96ce206ab619bc499e01627ea7d4936
-      internalID: -1074636238
+      spriteID: 4e9fd7252153fe9408f52b55862ac184
+      internalID: -1418231906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_4
+      name: Slime_Blue_Walk_Up_4
       rect:
         serializedVersion: 2
         x: 400
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2223e961c85a256418f7b37a48803e28
-      internalID: -932134345
+      spriteID: 74a8432fd22c101488dcf7565f0f5131
+      internalID: 1015960395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_5
+      name: Slime_Blue_Walk_Up_5
       rect:
         serializedVersion: 2
         x: 500
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5932892307699904480f59cdcf0eb71e
-      internalID: -333574231
+      spriteID: 91c86796f8bc45148a86130d1fd92833
+      internalID: 2107832979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_6
+      name: Slime_Blue_Walk_Up_6
       rect:
         serializedVersion: 2
         x: 600
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad24f91f6795e840aabdce7d3e0b2d4
-      internalID: 1866130696
+      spriteID: f7a3a0ac37995ff42b9b9cdb445850d9
+      internalID: -1497261874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slime_Green_Walk_Left_7
+      name: Slime_Blue_Walk_Up_7
       rect:
         serializedVersion: 2
         x: 700
@@ -278,8 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ab357bc99dc7245bc69b0f506cd909
-      internalID: 1490357807
+      spriteID: 9ddecdbd7fac7cb4b82087c426e2ea05
+      internalID: 244640687
       vertices: []
       indices: 
       edges: []
@@ -295,14 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slime_Green_Walk_Left_0: -860803198
-      Slime_Green_Walk_Left_6: 1866130696
-      Slime_Green_Walk_Left_1: -439004527
-      Slime_Green_Walk_Left_5: -333574231
-      Slime_Green_Walk_Left_4: -932134345
-      Slime_Green_Walk_Left_2: -85554718
-      Slime_Green_Walk_Left_7: 1490357807
-      Slime_Green_Walk_Left_3: -1074636238
+      Slime_Blue_Walk_Up_2: -1370167194
+      Slime_Blue_Walk_Up_0: -1281527150
+      Slime_Blue_Walk_Up_5: 2107832979
+      Slime_Blue_Walk_Up_7: 244640687
+      Slime_Blue_Walk_Up_6: -1497261874
+      Slime_Blue_Walk_Up_3: -1418231906
+      Slime_Blue_Walk_Up_4: 1015960395
+      Slime_Blue_Walk_Up_1: 470096524
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

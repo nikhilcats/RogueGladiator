@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MovingObject
+public class Enemy2 : MovingObject
 {
 
-    public int damage = 4;
     public int health = 6;
     public float moveSpeed = 3f;
 
@@ -14,6 +13,12 @@ public class Enemy1 : MovingObject
     private Animator animator;
     private EnemyManager enemyManager;
     private GameManager gameManager;
+    public GameObject vomit;
+    private bool vomitTurn;
+    private float moveDuration = 1.5f;
+    private float timer;
+    private float stillTimer;
+    private float stillDuration = 1.5f;
     private int pointValue = 100;     //how many points this enemy is worth
 
     protected override void Start()
@@ -23,11 +28,40 @@ public class Enemy1 : MovingObject
         enemyManager = GameObject.Find("GameManager/ArenaManager(Clone)/Enemyground").GetComponent<EnemyManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
+        timer = moveDuration;
+        stillTimer = stillDuration;
+        vomitTurn = true;
     }
 
     protected override void Update()
     {
-        GoTowardsTarget(player.transform.position);
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            if (vomitTurn)
+            {
+                velocity = Vector2.zero;
+                GameObject newVomit = Instantiate(vomit, transform.position, Quaternion.identity);
+                newVomit.transform.parent = this.transform.parent;
+                Vector2 vomVel = player.transform.position - transform.position;
+                vomVel.Normalize();
+                newVomit.GetComponent<Rigidbody2D>().velocity = vomVel * 3f;
+                vomitTurn = false;
+                //Destroy(newVomit, 6.0f);
+            }
+            else
+            {
+                if (timer < -stillDuration)
+                {
+                    timer = moveDuration;
+                    vomitTurn = true;
+                }
+            }
+        }
+        else
+        {
+             GoTowardsTarget(player.transform.position);
+        }
     }
 
     private void GoTowardsTarget(Vector3 pos)
@@ -48,8 +82,6 @@ public class Enemy1 : MovingObject
     public void TakeDamage(int amount)
     {
         health -= amount;
-        // if (rb2D != null)
-        //     rb2D.AddForce(knockback, ForceMode2D.Impulse);
         if (health < 0)
         {
             Debug.Log("It's time to die.");
@@ -58,15 +90,6 @@ public class Enemy1 : MovingObject
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            //collision.gameObject.SendMessage("ApplyKnockback", transform.position);
-            collision.gameObject.SendMessage("TakeDamage", damage);
-        }
-    }
-
-    void Attack()
     {
 
     }
