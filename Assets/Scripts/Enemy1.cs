@@ -5,29 +5,19 @@ using UnityEngine;
 public class Enemy1 : MovingObject
 {
 
-    private float damage;
-    private float health;
-    private float moveSpeed;
+    public int damage = 4;
+    public int health = 6;
+    public float moveSpeed = 3f;
+
     private float enemyName;
     private GameObject player;
     private Animator animator;
-    private float turnWait;
-    public float timeToNextTurn = 3f;
-    private bool myTurn = false;
-    private float timeBeforeEndMove;
-    public float moveDuration = 2f;
-    private float atkDist = 2f;
-    private float dist;
 
     protected override void Start()
     {
-        moveSpeed = 3f;
         base.Start();
         player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
         animator = GetComponent<Animator>();
-        turnWait = 0f;
-        timeBeforeEndMove = moveDuration;
-        health = 6f;
     }
 
     protected override void Update()
@@ -50,7 +40,7 @@ public class Enemy1 : MovingObject
         base.FixedUpdate();
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
         health -= amount;
         if (health < 0)
