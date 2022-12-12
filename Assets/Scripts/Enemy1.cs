@@ -15,6 +15,7 @@ public class Enemy1 : MovingObject
     private Rigidbody2D rb2D;
     private EnemyManager enemyManager;
     private GameManager gameManager;
+    private int pointValue = 100;     //how many points this enemy is worth
 
     protected override void Start()
     {
@@ -76,7 +77,7 @@ public class Enemy1 : MovingObject
       //add to kill count
       gameManager.totalMobsKilled++;
       //award points
-      gameManager.AddPoints(25);
+      gameManager.AddPoints(pointValue);
       //remove slime from list
       enemyManager.enemies.Remove(this.gameObject);
       UnityEngine.GameObject.Destroy(this.gameObject);

@@ -8,7 +8,7 @@ public class PortalBehavior : MonoBehaviour
   private GameObject player;
   private Player playerComponent;
   public string portalType;
-  private int pointValue = 100;
+  private int pointValue = 25;
   // Start is called before the first frame update
   void Start()
   {

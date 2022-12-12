@@ -21,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         arenaManager = transform.parent.GetComponent<ArenaManager>();
-        spawnBoundary = gameObject.GetComponent<CompositeCollider2D>();
+        spawnBoundary = this.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
         walkEnemyAmt = arenaManager.walkEnemyAmt;
         jumpEnemyAmt = arenaManager.jumpEnemyAmt;
@@ -32,7 +32,6 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-      Debug.Log(enemies.Count);
       if (enemies.Count <= 0 && !stateChanged)
       {
         Debug.Log("enemy Count");

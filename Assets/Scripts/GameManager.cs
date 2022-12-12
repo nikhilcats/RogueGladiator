@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
   //Awake is always called before any Start functions
   void Awake()
   {
-    seed = 1111691111;
+    seed = 1111691169;
     UnityEngine.Random.seed = seed;
     //Check if instance already exists
     if (instance == null)
