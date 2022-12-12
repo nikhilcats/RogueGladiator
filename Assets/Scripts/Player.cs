@@ -22,6 +22,10 @@ public class Player: MovingObject
     public LayerMask enemyLayers;
     private Transform attackPoint;
     private float timeSinceLastHit;
+    public AudioClip attackSound;
+    public AudioClip takeDamageSound;
+    public AudioClip deathSound;
+    public AudioClip deathBooSound;
 
     protected override void Start()
     {
@@ -90,6 +94,9 @@ public class Player: MovingObject
     void Attack()
     {
         animator.SetTrigger("Attack");
+        this.GetComponent<AudioSource>().clip = attackSound;
+        this.GetComponent<AudioSource>().volume = 0.08f;
+        this.GetComponent<AudioSource>().Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
@@ -113,13 +120,17 @@ public class Player: MovingObject
     {
       //i frames
       if (timeSinceLastHit > 0.5f) {
+        this.GetComponent<AudioSource>().clip = takeDamageSound;
+        this.GetComponent<AudioSource>().volume = 0.2f;
+        this.GetComponent<AudioSource>().Play();
         timeSinceLastHit = 0;
         health -= amount;
         if (health <= 0)
         {
           health = 0;
           //player death
-          gManagerScript.Die();
+         gManagerScript.Die();
+
         }
         //update game manager player health
         gManagerScript.playerHealth = health;

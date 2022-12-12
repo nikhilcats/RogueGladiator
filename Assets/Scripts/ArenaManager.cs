@@ -24,7 +24,7 @@ public class ArenaManager : MonoBehaviour
   public Sprite enemy3Sprite;
 
   //GameManager reference
-  private GameObject gameManager;
+    private GameObject gameManager;
   private GameManager gManagerScript;
 
   private EnemyManager enemyManager;
@@ -33,7 +33,8 @@ public class ArenaManager : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    //grab arena parameters from GameManager
+        //grab arena parameters from GameManager
+        
     gameManager = GameObject.Find("GameManager");
     gManagerScript = gameManager.GetComponent<GameManager>();
     enemyManager = GameObject.Find("Enemyground").GetComponent<EnemyManager>();
@@ -42,7 +43,8 @@ public class ArenaManager : MonoBehaviour
     rangedEnemyAmt = gManagerScript.rangedEnemyAmt;
     spikeTrapAmt = gManagerScript.spikeTrapAmt;
     boulderFreq = gManagerScript.boulderFreq;
-  }
+
+    }
 
   // Update is called once per frame
   void Update()
