@@ -70,7 +70,7 @@ public class Player: MovingObject
 
     void updateHealthText()
     {
-      String healthStr = health.ToString();
+      string healthStr = health.ToString();
       healthUIText.text = healthStr;
     }
 }

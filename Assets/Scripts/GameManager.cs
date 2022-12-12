@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;        //Allows us to use Lists.
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
   private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f);
   private CameraMovementScript camScript;
   private string gameState;
+  private TextMeshProUGUI floorUIText;
 
   //arena setup parameters
   public int walkEnemyAmt;
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
 
   public void newArena()
   {
+    updateFloorText();
     //if old arenaManager exists destroy it
     if (arenaManagerObj)
     {
@@ -80,9 +83,12 @@ public class GameManager : MonoBehaviour
     arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
   }
 
-
-
-
+  private void updateFloorText()
+  {
+    string floorNum = floorLevel.ToString();
+    floorUIText = GameObject.Find("GameManager/UICanvas/FloorText").GetComponent<TextMeshProUGUI>();
+    floorUIText.text = "Floor: " + floorNum;
+  }
 
 
   public void setArenaGameStatePortal()
