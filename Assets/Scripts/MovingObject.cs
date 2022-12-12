@@ -3,7 +3,7 @@ using System.Collections;
 
 public abstract class MovingObject : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
+    protected Rigidbody2D rb2D;
 
     protected Vector2 velocity;
 
