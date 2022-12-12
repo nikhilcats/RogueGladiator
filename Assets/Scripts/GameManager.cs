@@ -169,6 +169,18 @@ public class GameManager : MonoBehaviour
     return choice;
   }
 
+  //death
+  public void Die()
+  {
+    //play death animation
+
+    //later on should tie the following functions to death animation
+    //switch scene to post game
+    SceneManager.LoadScene("PostGame");
+    //kill current game
+    UnityEngine.Object.Destroy(GameObject.Find("GameManager"));
+  }
+
 /*
   //this is called only once, and the parameter tells it to be called only after the scene was loaded
   //(otherwise, our Scene Load callback would be called the very first load, and we don't want that)
