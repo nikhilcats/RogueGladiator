@@ -4328,7 +4328,7 @@ MonoBehaviour:
   arenaManagerPrefab: {fileID: 2610748664318622439, guid: 93c050a79a30b43c5a27ef6c3555094a, type: 3}
   spikeTrapAmt: 0
   boulderFreq: 0
-  walkEnemyAmt: 0
+  walkEnemyAmt: 1
   jumpEnemyAmt: 0
   rangedEnemyAmt: 0
   lastPortalChoice: 
@@ -4339,6 +4339,7 @@ MonoBehaviour:
   playerAtkDamage: 3
   playerAtkSpeed: 0.1
   playerMoveSpeed: 3
+  totalMobsKilled: 0
 --- !u!114 &1705454804
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
   public string lastPortalChoice;   //which thing was tied to the most recent portal selection
-  private string[] portalChoices = {"spikes", "boulders", "enemy1", "enemy2", "enemy3"};
+  private string[] portalChoices = {"spikes", "boulders", "enemy1"};//, "enemy2", "enemy3"};
 
   // Player stats that persist through levels
   public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
   public float playerMoveSpeed = 4f;
 
   //scores
+  public int totalMobsKilled = 0;
   private int floorsCleared = 0;
-  private int totalMobsKilled = 0;
   private int pointScore = 0;
   private float timeTaken = 0f;
   private float timeCount = 0f;     //ongoing recording of time elapsed
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
     if  (lastPortalChoice == "spikes")
     {
       //modification can be tweaked here
-      spikeTrapAmt++;
+      spikeTrapAmt += 2;
     }
     else if (lastPortalChoice == "boulders")
     {
