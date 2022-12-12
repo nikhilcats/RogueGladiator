@@ -911,7 +911,7 @@ MonoBehaviour:
   spikeSprite: {fileID: -1783180550, guid: 9ed41d60074ac422aad3c8ddbc2fddf3, type: 3}
   boulderSprite: {fileID: -1439593859, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
   enemy1Sprite: {fileID: -1688581491, guid: eae31534ce4802d4db5fcbc4f4eb9937, type: 3}
-  enemy2Sprite: {fileID: 21300000, guid: e8deaf2ef56b36a42804e74fd5518887, type: 3}
+  enemy2Sprite: {fileID: 46646208, guid: 9cf155896fa152c41956c990ef72a147, type: 3}
   enemy3Sprite: {fileID: 21300000, guid: 61d1f49e81e3d9348bd1d4cffa128e58, type: 3}
 --- !u!1 &2610748664400764568
 GameObject:

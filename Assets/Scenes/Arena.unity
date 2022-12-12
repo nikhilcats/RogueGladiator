@@ -4329,7 +4329,7 @@ MonoBehaviour:
   spikeTrapAmt: 0
   boulderFreq: 0
   walkEnemyAmt: 1
-  jumpEnemyAmt: 0
+  jumpEnemyAmt: 3
   rangedEnemyAmt: 0
   lastPortalChoice: 
   floorLevel: 1

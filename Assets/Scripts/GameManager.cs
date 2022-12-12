@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
   public string lastPortalChoice;   //which thing was tied to the most recent portal selection
-  private string[] portalChoices = {"spikes", "boulders", "enemy1"};//, "enemy2", "enemy3"};
+  private string[] portalChoices = {"spikes", "boulders", "enemy1", "enemy2"};// "enemy3"};
 
   // Player stats that persist through levels
   public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
