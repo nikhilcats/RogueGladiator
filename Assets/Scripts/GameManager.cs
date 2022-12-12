@@ -38,9 +38,11 @@ public class GameManager : MonoBehaviour
   public float playerMoveSpeed = 3f;
 
   //scores
+  private int floorsCleared = 0;
   private int totalMobsKilled = 0;
-  private float pointScore = 0;
+  private int pointScore = 0;
   private float timeTaken = 0f;
+  private float timeCount = 0f;     //ongoing recording of time elapsed
   //path taken
 
 //     public float expMultiplier = 1.8f;
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
   //Awake is always called before any Start functions
   void Awake()
   {
-    seed = 1111111111;
+    seed = 1111691111;
     UnityEngine.Random.seed = seed;
     //Check if instance already exists
     if (instance == null)
@@ -172,6 +174,13 @@ public class GameManager : MonoBehaviour
   //death
   public void Die()
   {
+    //calculate ending stats
+    floorsCleared = floorLevel - 1;
+    timeTaken = timeCount;
+    PlayerPrefs.SetInt("floorsCleared", floorsCleared);
+    PlayerPrefs.SetInt("mobsKilled", totalMobsKilled);
+    PlayerPrefs.SetInt("points", pointScore);
+    PlayerPrefs.SetFloat("timeTaken", timeTaken);
     //play death animation
 
     //later on should tie the following functions to death animation
@@ -179,6 +188,11 @@ public class GameManager : MonoBehaviour
     SceneManager.LoadScene("PostGame");
     //kill current game
     UnityEngine.Object.Destroy(GameObject.Find("GameManager"));
+  }
+
+  public void AddPoints(int points)
+  {
+    pointScore += points;
   }
 
 /*
@@ -213,6 +227,6 @@ public class GameManager : MonoBehaviour
   //Update is called every frame.
   void Update()
   {
-
+    timeCount += Time.deltaTime;
   }
 }

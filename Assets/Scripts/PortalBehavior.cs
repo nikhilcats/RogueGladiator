@@ -8,6 +8,7 @@ public class PortalBehavior : MonoBehaviour
   private GameObject player;
   private Player playerComponent;
   public string portalType;
+  private int pointValue = 100;
   // Start is called before the first frame update
   void Start()
   {
@@ -36,6 +37,8 @@ public class PortalBehavior : MonoBehaviour
       gameManager.lastPortalChoice = portalType;
       //iterate floor number
       gameManager.floorLevel++;
+      //add to points
+      gameManager.AddPoints(pointValue);
       //spawn new arena with new setup
       gameManager.newArena();
     }
