@@ -14,6 +14,15 @@ public class ArenaManager : MonoBehaviour
   public GameObject portal1;
   public GameObject portal2;
 
+  //for portal icons
+  public GameObject icon1;
+  public GameObject icon2;
+  public Sprite spikeSprite;
+  public Sprite boulderSprite;
+  public Sprite enemy1Sprite;
+  public Sprite enemy2Sprite;
+  public Sprite enemy3Sprite;
+
   //GameManager reference
   private GameObject gameManager;
   private GameManager gManagerScript;
@@ -38,6 +47,12 @@ public class ArenaManager : MonoBehaviour
     if (gameState == "portal")
     {
       gManagerScript.assignPortals();
+      //get portal type
+      string portalType1 = portal1.GetComponent<PortalBehavior>().portalType;
+      string portalType2 = portal2.GetComponent<PortalBehavior>().portalType;
+      //set icon based on portal type
+      SetIcons(portalType1, icon1);
+      SetIcons(portalType2, icon2);
       //play wizard spell animation
       Animator wizardAnim = GameObject.Find("Wizard").GetComponent<Animator>();
       wizardAnim.Play("wizardSpell");
@@ -53,10 +68,39 @@ public class ArenaManager : MonoBehaviour
     }
   }
 
+  //set portal icons
+  private void SetIcons(string typeOfPortal, GameObject icon)
+  {
+    SpriteRenderer render = icon.GetComponent<SpriteRenderer>();
+    if (typeOfPortal == "spikes")
+    {
+      render.sprite = spikeSprite;
+    }
+    else if (typeOfPortal == "boulders")
+    {
+      render.sprite = boulderSprite;
+    }
+    else if (typeOfPortal == "enemy1")
+    {
+      render.sprite = enemy1Sprite;
+    }
+    else if (typeOfPortal == "enemy2")
+    {
+      render.sprite = enemy2Sprite;
+    }
+    else if (typeOfPortal == "enemy3")
+    {
+      render.sprite = enemy3Sprite;
+    }
+  }
+
   public void SpawnPortals()
   {
     portal1.gameObject.SetActive(true);
     portal2.gameObject.SetActive(true);
+    //portal icons
+    icon1.gameObject.SetActive(true);
+    icon2.gameObject.SetActive(true);
   }
 
   public void SetupScene(int floor)
