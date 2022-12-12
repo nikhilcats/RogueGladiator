@@ -21,7 +21,7 @@ public class Enemy1 : MovingObject
     }
 
     protected override void Update()
-    {   
+    {
         GoTowardsTarget(player.transform.position);
     }
 
@@ -46,9 +46,12 @@ public class Enemy1 : MovingObject
         if (health < 0)
         {
             Debug.Log("It's time to die.");
-            Destroy(GetComponent<Rigidbody2D>());
             animator.Play("SlimeDeathDown");
-            GameObject.Destroy(this.gameObject, 2);
         }
+    }
+
+    public void SlimeDeath()
+    {
+      UnityEngine.GameObject.Destroy(this.gameObject);
     }
 }
