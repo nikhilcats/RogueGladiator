@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 2610748663920487636}
   - component: {fileID: 2610748663920487637}
   - component: {fileID: 2610748663920487638}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Enemyground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,8 +894,8 @@ GameObject:
   - component: {fileID: 2610748664400764557}
   - component: {fileID: 2610748664400764559}
   - component: {fileID: 2610748664400764560}
-  - component: {fileID: 2610748664400764561}
   - component: {fileID: 7996893538031101845}
+  - component: {fileID: 7061835506968932485}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -914,7 +914,11 @@ Transform:
   m_LocalPosition: {x: 0.42, y: -5.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4433852721415724862}
+  - {fileID: 16738793319171792}
+  - {fileID: 1395153487294177945}
+  - {fileID: 6078138257432338075}
   m_Father: {fileID: 2610748664124171796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -959,7 +963,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1541669942, guid: 53a1b52b7363b50498cfb56b931b47cd, type: 3}
+  m_Sprite: {fileID: -1728353568, guid: 1fd309c1f8ef4b94b94707ae3a49bf3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -982,7 +986,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 0.0011
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -1017,18 +1021,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2610748664400764561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610748664400764568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ff05aa28e5c2c4ebe1cac75b25a0a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &7996893538031101845
 Animator:
   serializedVersion: 4
