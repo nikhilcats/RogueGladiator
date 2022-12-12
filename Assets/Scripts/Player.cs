@@ -7,7 +7,7 @@ public class Player: MovingObject
 {
     private float moveSpeed;
     private int health;
-    private float damage;
+    private int damage;
     private TextMeshProUGUI healthUIText;
     private GameObject gameManager;
     private GameManager gManagerScript;
@@ -26,13 +26,13 @@ public class Player: MovingObject
         gameManager = GameObject.Find("GameManager");
         gManagerScript = gameManager.GetComponent<GameManager>();
         health = gManagerScript.playerHealth;
+        moveSpeed = gManagerScript.playerMoveSpeed;
+        damage = gManagerScript.playerAtkDamage;
         healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
         animator = this.GetComponent<Animator>();
-        moveSpeed = 5f;
         updateHealthText();
         base.Start();
         localScale = transform.localScale;
-        damage = 3f;
     }
 
     protected override void Update()
