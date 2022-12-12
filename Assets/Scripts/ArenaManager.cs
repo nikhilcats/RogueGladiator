@@ -27,12 +27,16 @@ public class ArenaManager : MonoBehaviour
   private GameObject gameManager;
   private GameManager gManagerScript;
 
+  private EnemyManager enemyManager;
+  private bool stateChanged = false;         //bool to make sure gamestate only changes once when mobs cleared
+
   // Start is called before the first frame update
   void Start()
   {
     //grab arena parameters from GameManager
     gameManager = GameObject.Find("GameManager");
     gManagerScript = gameManager.GetComponent<GameManager>();
+    enemyManager = GameObject.Find("Enemyground").GetComponent<EnemyManager>();
     walkEnemyAmt = gManagerScript.walkEnemyAmt;
     jumpEnemyAmt = gManagerScript.jumpEnemyAmt;
     rangedEnemyAmt = gManagerScript.rangedEnemyAmt;
@@ -43,6 +47,13 @@ public class ArenaManager : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    //check for if enemy list is empty in enemy manager
+    Debug.Log("HERE: " + enemyManager.enemies.Count);
+    if (enemyManager.enemies.Count <= 0 && !stateChanged)
+    {
+      gameState = "portal";
+      stateChanged = true;
+    }
     //check game state and change when needed
     if (gameState == "portal")
     {

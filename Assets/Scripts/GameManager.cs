@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
   private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f); //coordinates taken from unity inspector
   private CameraMovementScript camScript;
   private TextMeshProUGUI floorUIText;
+  private TextMeshProUGUI scoreUIText;
   private PortalBehavior portal1;
   private PortalBehavior portal2;
 
@@ -150,6 +151,8 @@ public class GameManager : MonoBehaviour
     string floorNum = floorLevel.ToString();
     floorUIText = GameObject.Find("GameManager/UICanvas/FloorText").GetComponent<TextMeshProUGUI>();
     floorUIText.text = "Floor: " + floorNum;
+    //set score UI text as well
+    scoreUIText = GameObject.Find("GameManager/UICanvas/ScoreText").GetComponent<TextMeshProUGUI>();
   }
 
   public void setArenaGameStatePortal()
@@ -228,5 +231,6 @@ public class GameManager : MonoBehaviour
   void Update()
   {
     timeCount += Time.deltaTime;
+    scoreUIText.text = "Score: " + pointScore;
   }
 }

@@ -586,7 +586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SirMushManIII
+  m_text: Faelan Roney - Faro North Games
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f473f9a2bea8409c9ca31787accc62e, type: 2}
   m_sharedMaterial: {fileID: -3124432658780667712, guid: 5f473f9a2bea8409c9ca31787accc62e, type: 2}
@@ -901,7 +901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 55}
+  m_AnchoredPosition: {x: -300, y: 25}
   m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861435400
