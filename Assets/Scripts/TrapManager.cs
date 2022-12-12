@@ -128,7 +128,6 @@ public class TrapManager : MonoBehaviour
         Animator trapAnim = trap.GetComponent<Animator>();
         trapBehavior.ArmTrap();
         trapAnim.Play("spikeArm");
-        Debug.Log("trap armed");
       }
     }
 
@@ -141,7 +140,6 @@ public class TrapManager : MonoBehaviour
         Animator trapAnim = trap.GetComponent<Animator>();
         trapBehavior.DisarmTrap();
         trapAnim.Play("spikeDisarm");
-        Debug.Log("trap disarmed");
       }
     }
 
@@ -149,6 +147,5 @@ public class TrapManager : MonoBehaviour
     public void StopBoulders()
     {
       frequency = 0;
-      Debug.Log("boulders stopped");
     }
 }

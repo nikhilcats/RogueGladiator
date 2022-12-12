@@ -64,13 +64,12 @@ public class Player: MovingObject
       {
         health = 0;
       }
-      Debug.Log("Current health: " + health);
       updateHealthText();
     }
 
     void updateHealthText()
     {
-      String healthStr = health.ToString();
+      string healthStr = health.ToString();
       healthUIText.text = healthStr;
     }
 }

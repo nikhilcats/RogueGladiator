@@ -7,6 +7,7 @@ public class PortalBehavior : MonoBehaviour
   private GameManager gameManager;
   private GameObject player;
   private Player playerComponent;
+  public string portalType;
   // Start is called before the first frame update
   void Start()
   {
@@ -31,12 +32,14 @@ public class PortalBehavior : MonoBehaviour
     //check if player object is colliding
     if (other == player.GetComponent<Collider2D>())
     {
-      Debug.Log("new arena spawned");
       //pass portal type to game manager
+      gameManager.lastPortalChoice = portalType;
       //iterate floor number
       gameManager.floorLevel++;
       //spawn new arena with new setup
       gameManager.newArena();
     }
   }
+
+
 }

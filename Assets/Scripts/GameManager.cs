@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 using System.Collections;
 using System.Collections.Generic;        //Allows us to use Lists.
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,20 +12,24 @@ public class GameManager : MonoBehaviour
   private ArenaManager arenaManager;            //Store a reference to our ArenaManager which will set up the level.
   private GameObject arenaManagerObj;
   public GameObject arenaManagerPrefab;
-  public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
-  private string seed;
-  private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f);
+  private int seed;
+  private Vector3 arenaManagerTransform = new Vector3(4.5f, -0.2f, -1f); //coordinates taken from unity inspector
   private CameraMovementScript camScript;
-  private string gameState;
+  private TextMeshProUGUI floorUIText;
+  private PortalBehavior portal1;
+  private PortalBehavior portal2;
 
   //arena setup parameters
+  public int spikeTrapAmt;
+  public double boulderFreq;
   public int walkEnemyAmt;
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
-  public int spikeTrapAmt;
-  public double boulderFreq;
+  public string lastPortalChoice;   //which thing was tied to the most recent portal selection
+  private string[] portalChoices = {"spikes", "boulders", "enemy1", "enemy2", "enemy3"};
 
   // Player stats that persist through levels
+  public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
   public int playerLevel = 1;
   public int playerHealth = 100;
   public int playerMaxHealth = 101;
@@ -46,7 +52,8 @@ public class GameManager : MonoBehaviour
   //Awake is always called before any Start functions
   void Awake()
   {
-    seed = "1111111111111111";
+    seed = 1111111111;
+    UnityEngine.Random.seed = seed;
     //Check if instance already exists
     if (instance == null)
     {
@@ -69,30 +76,100 @@ public class GameManager : MonoBehaviour
 
   public void newArena()
   {
+    updateFloorText();
     //if old arenaManager exists destroy it
     if (arenaManagerObj)
     {
       UnityEngine.Object.Destroy(arenaManagerObj);
     }
+    //update game manager arena generation parameters
+    updateArenaGeneration();
     //spawn new arena
     arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
     arenaManagerObj.transform.parent = this.transform;
     arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
+
   }
 
+  //handles modifying values for trap/enemy spawns
+  private void updateArenaGeneration()
+  {
+    if  (lastPortalChoice == "spikes")
+    {
+      //modification can be tweaked here
+      spikeTrapAmt++;
+    }
+    else if (lastPortalChoice == "boulders")
+    {
+      boulderFreq++;
+    }
+    else if (lastPortalChoice == "enemy1")
+    {
+      walkEnemyAmt++;
+      //walkEnemyAmtTEMP++;
+    }
+    else if (lastPortalChoice == "enemy2")
+    {
+      jumpEnemyAmt++;
+      //jumpEnemyAmtTEMP++;
+    }
+    else if (lastPortalChoice == "enemy3")
+    {
+      rangedEnemyAmt++;
+      //rangedEnemyAmtTEMP++;
+    }
+  }
 
+  public void assignPortals()
+  {
+    //set portal choices
+    //find portal objects
+    portal1 = GameObject.Find("GameManager/ArenaManager(Clone)/Portal1").GetComponent<PortalBehavior>();
+    portal2 = GameObject.Find("GameManager/ArenaManager(Clone)/Portal2").GetComponent<PortalBehavior>();
+    //set their types
+    Debug.Log("last choice " + lastPortalChoice);
+    if (floorLevel == 1)
+    {
+      string p1Result = randomPortal("whatever");
+      portal1.portalType = p1Result;
+      lastPortalChoice = p1Result;
+    }
+    else
+    {
+      portal1.portalType = lastPortalChoice;
+    }
+    portal2.portalType = randomPortal(lastPortalChoice);
+    Debug.Log("portal1 " + portal1.portalType);
+    Debug.Log("portal2 " + portal2.portalType);
+    GameObject.Find("GameManager/UICanvas/p1").GetComponent<TextMeshProUGUI>().text = portal1.portalType;
+    GameObject.Find("GameManager/UICanvas/p2").GetComponent<TextMeshProUGUI>().text = portal2.portalType;
+  }
 
-
-
+  private void updateFloorText()
+  {
+    string floorNum = floorLevel.ToString();
+    floorUIText = GameObject.Find("GameManager/UICanvas/FloorText").GetComponent<TextMeshProUGUI>();
+    floorUIText.text = "Floor: " + floorNum;
+  }
 
   public void setArenaGameStatePortal()
   {
     arenaManager.gameState = "portal";
   }
 
-
-
-
+  private string randomPortal(string existingChoice)
+  {
+    string choice = existingChoice;
+    //while the new choice equals what is given in parameters, keep selecting new choices (so we dont get duplicates)
+    while (choice == existingChoice)
+    {
+      float length = (float)portalChoices.Length;
+      float randoNum = UnityEngine.Random.Range(0f, length - 1);
+      int index = (int)Math.Round(randoNum);
+      choice = portalChoices[index];
+    }
+    return choice;
+  }
 
 /*
   //this is called only once, and the parameter tells it to be called only after the scene was loaded

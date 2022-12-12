@@ -36,7 +36,6 @@ public class SpikeTrapBehaviorScript : MonoBehaviour
         //check if player object is the object colliding
         if (other == player.GetComponent<Collider2D>())
         {
-          Debug.Log(string.Format("haha idiot you stepped in the KNIFE PILE and took {0} damage!", damage));
           component.TakeDamage(damage);
         }
       }

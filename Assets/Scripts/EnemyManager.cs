@@ -7,39 +7,39 @@ public class EnemyManager : MonoBehaviour
 {
     public CompositeCollider2D spawnBoundary;
     public List<GameObject> enemies;
-    private int walkEnemyAmt;
     private ArenaManager arenaManager;
+    private int walkEnemyAmt;
+    private int jumpEnemyAmt;
+    private int rangedEnemyAmt;
 
     // Enemy prefabs
     public GameObject Enemy1;
     public GameObject Enemy2;
     public GameObject Enemy3;
 
-    private GameObject whichEnemy;
-
     void Start()
     {
         arenaManager = transform.parent.GetComponent<ArenaManager>();
         spawnBoundary = gameObject.GetComponent<CompositeCollider2D>();
         enemies = new List<GameObject>();
-        spawnEnemy(5, "chalay");
-        spawnEnemy(5, "paddy");
-        spawnEnemy(5, "salem");
+        walkEnemyAmt = arenaManager.walkEnemyAmt;
+        jumpEnemyAmt = arenaManager.jumpEnemyAmt;
+        rangedEnemyAmt = arenaManager.rangedEnemyAmt;
+        SpawnEnemies();
     }
 
-    private void spawnEnemy(int numberOfEnemies, string enemyName)
+    private void SpawnEnemies()
     {
-        if (enemyName == "chalay")
-            whichEnemy = Enemy1;
-        else if (enemyName == "paddy")
-            whichEnemy = Enemy2;
-        else if (enemyName == "salem")
-            whichEnemy = Enemy3;
+      spawnEnemy(walkEnemyAmt, Enemy1);
+      spawnEnemy(jumpEnemyAmt, Enemy2);
+      spawnEnemy(rangedEnemyAmt, Enemy3);
+    }
 
-        walkEnemyAmt = arenaManager.walkEnemyAmt;
+    private void spawnEnemy(int numberOfEnemies, GameObject enemyObject)
+    {
         int i = 0;
         double delta = 0.5;
-        while (i < walkEnemyAmt)
+        while (i < numberOfEnemies)
         {
             Vector3 rndPoint3D = RandomPointInBounds(spawnBoundary.bounds, 1f);
             Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour
                         goto tryAgain;
                     }
                 }
-                GameObject newEnemy = Instantiate(whichEnemy, rndPoint2D, Quaternion.identity);
+                GameObject newEnemy = Instantiate(enemyObject, rndPoint2D, Quaternion.identity);
                 newEnemy.transform.parent = this.transform;
                 enemies.Add(newEnemy);
                 Debug.Log("new enemy position: " + rndPoint2D.x + ", " + rndPoint2D.y);
@@ -73,5 +73,13 @@ public class EnemyManager : MonoBehaviour
             Random.Range(bounds.min.y * scale, bounds.max.y * scale),
             Random.Range(bounds.min.z * scale, bounds.max.z * scale)
         );
+    }
+
+    public void DespawnEnemies()
+    {
+      foreach (GameObject enemy in enemies)
+      {
+        UnityEngine.Object.Destroy(enemy);
+      }
     }
 }

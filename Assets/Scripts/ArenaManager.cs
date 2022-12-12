@@ -40,10 +40,13 @@ public class ArenaManager : MonoBehaviour
       //spawn portals
       portal1.gameObject.SetActive(true);
       portal2.gameObject.SetActive(true);
+      gManagerScript.assignPortals();
       //deactivate traps
       GameObject.Find("Enemyground").GetComponent<TrapManager>().Disarm();
       //stop boulder spawning
       GameObject.Find("Enemyground").GetComponent<TrapManager>().StopBoulders();
+      //despawn enemies
+      GameObject.Find("Enemyground").GetComponent<EnemyManager>().DespawnEnemies();
       gameState = "fight";
     }
   }
