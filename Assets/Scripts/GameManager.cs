@@ -72,12 +72,12 @@ public class GameManager : MonoBehaviour
     //Sets this to not be destroyed when reloading scene
     DontDestroyOnLoad(instance);
     //Get a component reference to the attached BoardManager script
-    newArena();
+    NewArena();
     //Call the InitGame function to initialize the first level
     InitGame();
   }
 
-  public void newArena()
+  public void NewArena()
   {
     updateFloorText();
     //if old arenaManager exists destroy it
