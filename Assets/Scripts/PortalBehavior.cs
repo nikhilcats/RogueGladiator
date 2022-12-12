@@ -9,6 +9,8 @@ public class PortalBehavior : MonoBehaviour
   private Player playerComponent;
   public string portalType;
   private int pointValue = 25;
+
+
   // Start is called before the first frame update
   void Start()
   {
@@ -33,6 +35,7 @@ public class PortalBehavior : MonoBehaviour
     //check if player object is colliding
     if (other == player.GetComponent<Collider2D>())
     {
+
       //pass portal type to game manager
       gameManager.lastPortalChoice = portalType;
       //iterate floor number

@@ -8,6 +8,7 @@ public class Enemy1 : MovingObject
     public int damage = 4;
     public int health = 6;
     public float moveSpeed = 3f;
+    public AudioClip slimeTakeDamageSound;
 
     private float enemyName;
     private GameObject player;
@@ -47,6 +48,9 @@ public class Enemy1 : MovingObject
 
     public void TakeDamage(int amount)
     {
+        this.GetComponent<AudioSource>().volume = .3f;
+        this.GetComponent<AudioSource>().clip = slimeTakeDamageSound;
+        this.GetComponent<AudioSource>().Play();
         health -= amount;
         // if (rb2D != null)
         //     rb2D.AddForce(knockback, ForceMode2D.Impulse);
