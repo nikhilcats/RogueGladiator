@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
   public int playerMaxHealth = 101;
   public int playerAtkDamage = 3;
   public float playerAtkSpeed = 0.1f;
-  public float playerMoveSpeed = 3f;
+  public float playerMoveSpeed = 4f;
 
   //scores
   private int floorsCleared = 0;
