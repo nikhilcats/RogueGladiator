@@ -7,49 +7,40 @@ public class TogglePauseOverlayScript : MonoBehaviour
 {
     public Canvas overlayCanvas;
     public Canvas optionsCanvas;
-    public string seed;
-    public TextMeshProUGUI textElement;
-
-    public TMP_InputField tmpInput;
-    private int seedLength = 16;
-    private List<int> seedList = new List<int>();
 
     private void Start()
     {
-
 
     }
     // Update is called once per frame
     void Update()
     {
-        //exits pause
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-          if (overlayCanvas.gameObject.activeInHierarchy) {
-            overlayCanvas.gameObject.SetActive(false);
-            Time.timeScale = 1;
-          }
-          //Shows pause
-          else {
-
-            //seed stuff
-            createSeed();
-            tmpInput.text = seed;
-            //end seed stuff
-            if (!optionsCanvas.gameObject.activeInHierarchy) {
-              overlayCanvas.gameObject.SetActive(true);
-              Time.timeScale = 0;
-            }
+      //exits pause
+      if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (overlayCanvas.gameObject.activeInHierarchy) {
+          overlayCanvas.gameObject.SetActive(false);
+          Time.timeScale = 1;
+        }
+        //Shows pause
+        else {
+          //seed stuff
+          if (!optionsCanvas.gameObject.activeInHierarchy) {
+            overlayCanvas.gameObject.SetActive(true);
+            Time.timeScale = 0;
           }
         }
+      }
     }
 
     //for resume button
-    public void ResumeGame() {
+    public void ResumeGame()
+    {
       overlayCanvas.gameObject.SetActive(false);
       Time.timeScale = 1;
     }
-
-    public void createSeed()
+}
+/*
+    private void createSeed()
     {
         string seedString = "Seed: ";
         seedList = new List<int>();
@@ -66,6 +57,21 @@ public class TogglePauseOverlayScript : MonoBehaviour
         }
         print(seedString);
         seed = seedString;
-
     }
-}
+*/
+
+//SEED STUFF MOVED HERE
+/*
+public string seed;
+public TextMeshProUGUI textElement;
+public TMP_InputField tmpInput;
+private int seedLength = 16;
+private List<int> seedList = new List<int>();
+
+  //seed stuff
+  createSeed();
+  tmpInput.text = seed;
+  //end seed stuff
+
+
+*/
