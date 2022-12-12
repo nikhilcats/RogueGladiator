@@ -95,7 +95,7 @@ public class Player: MovingObject
     {
         animator.SetTrigger("Attack");
         this.GetComponent<AudioSource>().clip = attackSound;
-        this.GetComponent<AudioSource>().volume = 0.08f;
+        this.GetComponent<AudioSource>().volume = 0.1f;
         this.GetComponent<AudioSource>().Play();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)

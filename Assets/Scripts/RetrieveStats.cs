@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class RetrieveStats : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class RetrieveStats : MonoBehaviour
       pointsText = GameObject.Find("PointText").GetComponent<TextMeshProUGUI>();
 
       //set text based on playerpref values
-      timeText.text = "TIME ELAPSED: " + PlayerPrefs.GetFloat("timeTaken");
+      timeText.text = "TIME ELAPSED: " + Math.Round(PlayerPrefs.GetFloat("timeTaken")) + " Seconds";
       floorsText.text = "FLOORS CLEARED: " + PlayerPrefs.GetInt("floorsCleared");
       mobsText.text = "MOBS KILLED: " + PlayerPrefs.GetInt("mobsKilled");
       pointsText.text = "SCORE: " + PlayerPrefs.GetInt("points");

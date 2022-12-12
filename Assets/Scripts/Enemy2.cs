@@ -43,7 +43,7 @@ public class Enemy2 : MovingObject
             if (vomitTurn)
             {
                 velocity = Vector2.zero;
-                this.GetComponent<AudioSource>().volume = 0.3f;
+                this.GetComponent<AudioSource>().volume = 0.1f;
                 this.GetComponent<AudioSource>().clip = blueSlimeAttack;
                 this.GetComponent<AudioSource>().Play();
                 GameObject newVomit = Instantiate(vomit, transform.position, Quaternion.identity);
@@ -86,7 +86,7 @@ public class Enemy2 : MovingObject
 
     public void TakeDamage(int amount)
     {
-        this.GetComponent<AudioSource>().volume = 0.3f;
+        this.GetComponent<AudioSource>().volume = 0.1f;
         this.GetComponent<AudioSource>().clip = blueSlimeTakeDamage;
         this.GetComponent<AudioSource>().Play();
         health -= amount;
