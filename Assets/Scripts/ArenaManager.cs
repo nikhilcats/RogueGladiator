@@ -40,6 +40,7 @@ public class ArenaManager : MonoBehaviour
       //spawn portals
       portal1.gameObject.SetActive(true);
       portal2.gameObject.SetActive(true);
+      gManagerScript.assignPortals();
       //deactivate traps
       GameObject.Find("Enemyground").GetComponent<TrapManager>().Disarm();
       //stop boulder spawning

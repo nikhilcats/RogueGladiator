@@ -64,7 +64,6 @@ public class Player: MovingObject
       {
         health = 0;
       }
-      Debug.Log("Current health: " + health);
       updateHealthText();
     }
 
