@@ -58,7 +58,9 @@ public class TrapManager : MonoBehaviour
       Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
       //add boulder to boulder list
       GameObject newBoulder = Instantiate(BoulderPrefab, rndPoint2D, Quaternion.identity);
+      //move z axis of boulder to above player (-0.2)
       newBoulder.transform.parent = this.transform;
+      transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
       boulders.Add(newBoulder);
       //run boulder behavior method
       BoulderBehavior behavior = newBoulder.GetComponent<BoulderBehavior>();
@@ -115,7 +117,7 @@ public class TrapManager : MonoBehaviour
         return new Vector3(
             Random.Range(bounds.min.x * scale, bounds.max.x * scale),
             Random.Range(bounds.min.y * scale, bounds.max.y * scale),
-            -0.1f
+            0.0f
         );
     }
 

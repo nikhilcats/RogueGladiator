@@ -37,10 +37,12 @@ public class ArenaManager : MonoBehaviour
     //check game state and change when needed
     if (gameState == "portal")
     {
-      //spawn portals
-      portal1.gameObject.SetActive(true);
-      portal2.gameObject.SetActive(true);
       gManagerScript.assignPortals();
+      //play wizard spell animation
+      Animator wizardAnim = GameObject.Find("Wizard").GetComponent<Animator>();
+      wizardAnim.Play("wizardSpell");
+      //spawn portals
+      SpawnPortals();
       //deactivate traps
       GameObject.Find("Enemyground").GetComponent<TrapManager>().Disarm();
       //stop boulder spawning
@@ -49,6 +51,12 @@ public class ArenaManager : MonoBehaviour
       GameObject.Find("Enemyground").GetComponent<EnemyManager>().DespawnEnemies();
       gameState = "fight";
     }
+  }
+
+  public void SpawnPortals()
+  {
+    portal1.gameObject.SetActive(true);
+    portal2.gameObject.SetActive(true);
   }
 
   public void SetupScene(int floor)

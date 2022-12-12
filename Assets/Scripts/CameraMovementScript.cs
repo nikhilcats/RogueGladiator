@@ -34,7 +34,7 @@ public class CameraMovementScript : MonoBehaviour
       cameraPosition = Vector3.Lerp(cameraPosition, playerPosition, followSpeed);
       cameraPosition.x = Mathf.Clamp(cameraPosition.x, xMin, xMax);
       cameraPosition.y = Mathf.Clamp(cameraPosition.y, yMin, yMax);
-      cameraPosition.z = Mathf.Clamp(cameraPosition.z, -1, -1);
+      cameraPosition.z = Mathf.Clamp(cameraPosition.z, -2, -2);
 
       transform.position = cameraPosition;
     }
