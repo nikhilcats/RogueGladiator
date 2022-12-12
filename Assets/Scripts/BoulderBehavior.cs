@@ -38,13 +38,14 @@ public class BoulderBehavior : MonoBehaviour
   public void Land()
   {
     //turn isTrigger off
-    this.GetComponent<Collider2D>().isTrigger = false;
     //check if player inside box
     Collider2D playerBox = player.GetComponent<Collider2D>();
     Collider2D boulderBox = this.GetComponent<Collider2D>();
+    Debug.Log(playerBox.bounds);
     if (playerBox.bounds.Intersects(boulderBox.bounds))
     {
       component.TakeDamage(damage);
     }
+    this.GetComponent<Collider2D>().isTrigger = false;
   }
 }

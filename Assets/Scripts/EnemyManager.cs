@@ -25,9 +25,7 @@ public class EnemyManager : MonoBehaviour
         walkEnemyAmt = arenaManager.walkEnemyAmt;
         jumpEnemyAmt = arenaManager.jumpEnemyAmt;
         rangedEnemyAmt = arenaManager.rangedEnemyAmt;
-        Debug.Log(walkEnemyAmt);
         SpawnEnemies();
-        Debug.Log("enemymanager.cs start completed");
     }
 
     private void SpawnEnemies()

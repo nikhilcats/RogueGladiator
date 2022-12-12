@@ -25,7 +25,7 @@ public class Player: MovingObject
     {
         gameManager = GameObject.Find("GameManager");
         gManagerScript = gameManager.GetComponent<GameManager>();
-        health = gManagerScript.playerMaxHealth;
+        health = gManagerScript.playerHealth;
         healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
         animator = this.GetComponent<Animator>();
         moveSpeed = 5f;
@@ -105,17 +105,20 @@ public class Player: MovingObject
     public void TakeDamage(int amount)
     {
       health -= amount;
-      if (health < 0)
+      if (health <= 0)
       {
         health = 0;
+        //player death
+        gManagerScript.Die();
       }
-      Debug.Log("Current health: " + health);
+      //update game manager player health
+      gManagerScript.playerHealth = health;
       updateHealthText();
     }
 
     void updateHealthText()
     {
-      String healthStr = health.ToString();
+      string healthStr = health.ToString();
       healthUIText.text = healthStr;
     }
 }

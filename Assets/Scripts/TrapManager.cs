@@ -11,7 +11,7 @@ public class TrapManager : MonoBehaviour
 
     private ArenaManager arenaManager;
     private float time = 0f;
-    private float frequency = 0;
+    private float frequency;
     private int chance;
     private bool sometimesBoulderSticks = false;
     public CompositeCollider2D compositeCollider;
@@ -30,7 +30,12 @@ public class TrapManager : MonoBehaviour
       {
         frequency = (float)1/(float)boulderFreq;
       }
+      else
+      {
+        frequency = 0;
+      }
       spawnSpikeTraps();
+      Arm();
     }
 
     void Update()
@@ -53,7 +58,9 @@ public class TrapManager : MonoBehaviour
       Vector2 rndPoint2D = new Vector2(rndPoint3D.x, rndPoint3D.y);
       //add boulder to boulder list
       GameObject newBoulder = Instantiate(BoulderPrefab, rndPoint2D, Quaternion.identity);
+      //move z axis of boulder to above player (-0.2)
       newBoulder.transform.parent = this.transform;
+      transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
       boulders.Add(newBoulder);
       //run boulder behavior method
       BoulderBehavior behavior = newBoulder.GetComponent<BoulderBehavior>();
@@ -110,7 +117,7 @@ public class TrapManager : MonoBehaviour
         return new Vector3(
             Random.Range(bounds.min.x * scale, bounds.max.x * scale),
             Random.Range(bounds.min.y * scale, bounds.max.y * scale),
-            -0.1f
+            0.0f
         );
     }
 
@@ -123,7 +130,6 @@ public class TrapManager : MonoBehaviour
         Animator trapAnim = trap.GetComponent<Animator>();
         trapBehavior.ArmTrap();
         trapAnim.Play("spikeArm");
-        Debug.Log("trap armed");
       }
     }
 
@@ -136,7 +142,12 @@ public class TrapManager : MonoBehaviour
         Animator trapAnim = trap.GetComponent<Animator>();
         trapBehavior.DisarmTrap();
         trapAnim.Play("spikeDisarm");
-        Debug.Log("trap disarmed");
       }
+    }
+
+    //stop boulder spawning
+    public void StopBoulders()
+    {
+      frequency = 0;
     }
 }
