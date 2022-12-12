@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     private int walkEnemyAmt;
     private int jumpEnemyAmt;
     private int rangedEnemyAmt;
+    private bool stateChanged;         //bool to make sure gamestate only changes once when mobs cleared
 
     // Enemy prefabs
     public GameObject Enemy1;
@@ -25,7 +26,19 @@ public class EnemyManager : MonoBehaviour
         walkEnemyAmt = arenaManager.walkEnemyAmt;
         jumpEnemyAmt = arenaManager.jumpEnemyAmt;
         rangedEnemyAmt = arenaManager.rangedEnemyAmt;
+        stateChanged = false;
         SpawnEnemies();
+    }
+
+    void Update()
+    {
+      Debug.Log(enemies.Count);
+      if (enemies.Count <= 0 && !stateChanged)
+      {
+        Debug.Log("enemy Count");
+        arenaManager.gameState = "portal";
+        stateChanged = true;
+      }
     }
 
     private void SpawnEnemies()

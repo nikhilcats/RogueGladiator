@@ -48,12 +48,15 @@ public class ArenaManager : MonoBehaviour
   void Update()
   {
     //check for if enemy list is empty in enemy manager
-    Debug.Log("HERE: " + enemyManager.enemies.Count);
+    //Debug.Log("HERE: " + enemyManager.enemies.Count);
+    /*
+    Debug.Log("AM");
     if (enemyManager.enemies.Count <= 0 && !stateChanged)
     {
       gameState = "portal";
       stateChanged = true;
     }
+    */
     //check game state and change when needed
     if (gameState == "portal")
     {

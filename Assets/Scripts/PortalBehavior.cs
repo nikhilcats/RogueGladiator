@@ -40,7 +40,7 @@ public class PortalBehavior : MonoBehaviour
       //add to points
       gameManager.AddPoints(pointValue);
       //spawn new arena with new setup
-      gameManager.newArena();
+      gameManager.NewArena();
     }
   }
 

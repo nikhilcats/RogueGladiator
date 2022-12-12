@@ -910,7 +910,7 @@ MonoBehaviour:
   icon2: {fileID: 4306556588167127850}
   spikeSprite: {fileID: -1783180550, guid: 9ed41d60074ac422aad3c8ddbc2fddf3, type: 3}
   boulderSprite: {fileID: -1439593859, guid: 1bcb683b06e6345f7b3a10b130db9829, type: 3}
-  enemy1Sprite: {fileID: 21300000, guid: 95db40655d62c2b408d3180dc0a80298, type: 3}
+  enemy1Sprite: {fileID: -1688581491, guid: eae31534ce4802d4db5fcbc4f4eb9937, type: 3}
   enemy2Sprite: {fileID: 21300000, guid: e8deaf2ef56b36a42804e74fd5518887, type: 3}
   enemy3Sprite: {fileID: 21300000, guid: 61d1f49e81e3d9348bd1d4cffa128e58, type: 3}
 --- !u!1 &2610748664400764568
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff05aa28e5c2c4ebe1cac75b25a0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackForce: 100
   attackPointDown: {fileID: 4915035960247708986}
   attackPointUp: {fileID: 3287628724603041173}
   attackPointLeft: {fileID: 8235009839911129328}

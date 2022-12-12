@@ -13,11 +13,15 @@ public class Enemy1 : MovingObject
     private GameObject player;
     private Animator animator;
     private Rigidbody2D rb2D;
+    private EnemyManager enemyManager;
+    private GameManager gameManager;
 
     protected override void Start()
     {
         base.Start();
         player = GameObject.Find("GameManager/ArenaManager(Clone)/PlayerBounds/Player");
+        enemyManager = GameObject.Find("GameManager/ArenaManager(Clone)/Enemyground").GetComponent<EnemyManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
     }
@@ -64,11 +68,18 @@ public class Enemy1 : MovingObject
 
     void Attack()
     {
-        
+
     }
-    
+
     public void SlimeDeath()
     {
+      //add to kill count
+      gameManager.totalMobsKilled++;
+      //award points
+      gameManager.AddPoints(25);
+      //remove slime from list
+      enemyManager.enemies.Remove(this.gameObject);
       UnityEngine.GameObject.Destroy(this.gameObject);
     }
+
 }
