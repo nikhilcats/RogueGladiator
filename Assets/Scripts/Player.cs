@@ -21,7 +21,7 @@ public class Player: MovingObject
     {
       gameManager = GameObject.Find("GameManager");
       gManagerScript = gameManager.GetComponent<GameManager>();
-      health = gManagerScript.playerMaxHealth;
+      health = gManagerScript.playerHealth;
       healthUIText = GameObject.Find("GameManager/UICanvas/HPtext").GetComponent<TextMeshProUGUI>();
       animator = this.GetComponent<Animator>();
       moveSpeed = 5f;
@@ -64,6 +64,8 @@ public class Player: MovingObject
       {
         health = 0;
       }
+      //update game manager player health
+      gManagerScript.playerHealth = health;
       updateHealthText();
     }
 
