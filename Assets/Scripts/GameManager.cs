@@ -100,13 +100,15 @@ public class GameManager : MonoBehaviour
     Debug.Log("last choice " + lastPortalChoice);
     if (floorLevel == 1)
     {
-      portal1.portalType = randomPortal();
+      string p1Result = randomPortal("whatever");
+      portal1.portalType = p1Result;
+      lastPortalChoice = p1Result;
     }
     else
     {
       portal1.portalType = lastPortalChoice;
     }
-    portal2.portalType = randomPortal();
+    portal2.portalType = randomPortal(lastPortalChoice);
     Debug.Log("portal1 " + portal1.portalType);
     Debug.Log("portal2 " + portal2.portalType);
   }
@@ -123,11 +125,16 @@ public class GameManager : MonoBehaviour
     arenaManager.gameState = "portal";
   }
 
-  private string randomPortal()
+  private string randomPortal(string existingChoice)
   {
-    float randoNum = UnityEngine.Random.Range(0f, 4f);
-    int index = (int)Math.Round(randoNum);
-    string choice = portalChoices[index];
+    string choice = existingChoice;
+    //while the new choice equals what is given in parameters, keep selecting new choices (so we dont get duplicates)
+    while (choice == existingChoice)
+    {
+      float randoNum = UnityEngine.Random.Range(0f, 4f);
+      int index = (int)Math.Round(randoNum);
+      choice = portalChoices[index];
+    }
     return choice;
   }
 
