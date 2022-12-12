@@ -23,6 +23,7 @@ public abstract class MovingObject : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
+        if (rb2D != null)
+            rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
     }
 }

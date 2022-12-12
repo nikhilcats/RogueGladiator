@@ -8,6 +8,7 @@ public class Player: MovingObject
     private float moveSpeed;
     private int health;
     private int damage;
+    public float knockbackForce = 100f;
     private TextMeshProUGUI healthUIText;
     private GameObject gameManager;
     private GameManager gManagerScript;
@@ -89,8 +90,10 @@ public class Player: MovingObject
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.gameObject.GetComponent<Enemy1>().TakeDamage(damage);
             Debug.Log("We hit " + enemy.name);
+            Vector2 dir = (enemy.transform.position - transform.position).normalized;
+            Vector2 knockback = dir * knockbackForce;
+            enemy.gameObject.GetComponent<Enemy1>().TakeDamage(damage, knockback);
         }
     }
 
@@ -114,6 +117,7 @@ public class Player: MovingObject
       //update game manager player health
       gManagerScript.playerHealth = health;
       updateHealthText();
+      Debug.Log("my health is down to " + health);
     }
 
     void updateHealthText()
