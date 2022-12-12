@@ -141,8 +141,6 @@ public class GameManager : MonoBehaviour
     portal2.portalType = randomPortal(lastPortalChoice);
     Debug.Log("portal1 " + portal1.portalType);
     Debug.Log("portal2 " + portal2.portalType);
-    GameObject.Find("GameManager/UICanvas/p1").GetComponent<TextMeshProUGUI>().text = portal1.portalType;
-    GameObject.Find("GameManager/UICanvas/p2").GetComponent<TextMeshProUGUI>().text = portal2.portalType;
   }
 
   private void updateFloorText()
