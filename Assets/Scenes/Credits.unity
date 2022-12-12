@@ -924,7 +924,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sV_Marcus
+  m_text: Marcus Lowry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f473f9a2bea8409c9ca31787accc62e, type: 2}
   m_sharedMaterial: {fileID: -3124432658780667712, guid: 5f473f9a2bea8409c9ca31787accc62e, type: 2}
@@ -2015,7 +2015,7 @@ Transform:
   m_GameObject: {fileID: 1580109506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1230.4717, y: 693.9649, z: 322.75937}
+  m_LocalScale: {x: 1295.6866, y: 730.74506, z: 339.8656}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1413711458}
