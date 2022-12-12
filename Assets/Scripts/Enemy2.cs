@@ -20,6 +20,8 @@ public class Enemy2 : MovingObject
     private float stillTimer;
     private float stillDuration = 1.5f;
     private int pointValue = 100;     //how many points this enemy is worth
+    public AudioClip blueSlimeTakeDamage;
+    public AudioClip blueSlimeAttack;
 
     protected override void Start()
     {
@@ -41,6 +43,9 @@ public class Enemy2 : MovingObject
             if (vomitTurn)
             {
                 velocity = Vector2.zero;
+                this.GetComponent<AudioSource>().volume = 0.3f;
+                this.GetComponent<AudioSource>().clip = blueSlimeAttack;
+                this.GetComponent<AudioSource>().Play();
                 GameObject newVomit = Instantiate(vomit, transform.position, Quaternion.identity);
                 newVomit.transform.parent = this.transform.parent;
                 Vector2 vomVel = player.transform.position - transform.position;
@@ -81,6 +86,9 @@ public class Enemy2 : MovingObject
 
     public void TakeDamage(int amount)
     {
+        this.GetComponent<AudioSource>().volume = 0.3f;
+        this.GetComponent<AudioSource>().clip = blueSlimeTakeDamage;
+        this.GetComponent<AudioSource>().Play();
         health -= amount;
         if (health < 0)
         {
