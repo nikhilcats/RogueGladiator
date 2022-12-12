@@ -18,16 +18,15 @@ public class GameManager : MonoBehaviour
   private TextMeshProUGUI floorUIText;
   private PortalBehavior portal1;
   private PortalBehavior portal2;
-  private static string[] portalChoicesSimple = {"spikes", "boulders", "enemy1", "enemy2", "enemy3"};
 
   //arena setup parameters
+  public int spikeTrapAmt;
+  public double boulderFreq;
   public int walkEnemyAmt;
   public int jumpEnemyAmt;
   public int rangedEnemyAmt;
-  public int spikeTrapAmt;
-  public double boulderFreq;
   public string lastPortalChoice;   //which thing was tied to the most recent portal selection
-  public List<string> portalChoices = new List<string>(portalChoicesSimple);
+  private string[] portalChoices = {"spikes", "boulders", "enemy1", "enemy2", "enemy3"};
 
   // Player stats that persist through levels
   public int floorLevel = 1;                   //Current floor number, expressed in game as floor 1
@@ -83,11 +82,42 @@ public class GameManager : MonoBehaviour
     {
       UnityEngine.Object.Destroy(arenaManagerObj);
     }
+    //update game manager arena generation parameters
+    updateArenaGeneration();
     //spawn new arena
     arenaManagerObj = Instantiate(arenaManagerPrefab, arenaManagerTransform, Quaternion.identity);//GameObject.Find("ArenaManager").GetComponent<ArenaManager>();
     arenaManagerObj.transform.parent = this.transform;
     arenaManager = arenaManagerObj.GetComponent<ArenaManager>();
 
+  }
+
+  //handles modifying values for trap/enemy spawns
+  private void updateArenaGeneration()
+  {
+    if  (lastPortalChoice == "spikes")
+    {
+      //modification can be tweaked here
+      spikeTrapAmt++;
+    }
+    else if (lastPortalChoice == "boulders")
+    {
+      boulderFreq++;
+    }
+    else if (lastPortalChoice == "enemy1")
+    {
+      walkEnemyAmt++;
+      //walkEnemyAmtTEMP++;
+    }
+    else if (lastPortalChoice == "enemy2")
+    {
+      jumpEnemyAmt++;
+      //jumpEnemyAmtTEMP++;
+    }
+    else if (lastPortalChoice == "enemy3")
+    {
+      rangedEnemyAmt++;
+      //rangedEnemyAmtTEMP++;
+    }
   }
 
   public void assignPortals()
@@ -111,6 +141,8 @@ public class GameManager : MonoBehaviour
     portal2.portalType = randomPortal(lastPortalChoice);
     Debug.Log("portal1 " + portal1.portalType);
     Debug.Log("portal2 " + portal2.portalType);
+    GameObject.Find("GameManager/UICanvas/p1").GetComponent<TextMeshProUGUI>().text = portal1.portalType;
+    GameObject.Find("GameManager/UICanvas/p2").GetComponent<TextMeshProUGUI>().text = portal2.portalType;
   }
 
   private void updateFloorText()
@@ -131,7 +163,8 @@ public class GameManager : MonoBehaviour
     //while the new choice equals what is given in parameters, keep selecting new choices (so we dont get duplicates)
     while (choice == existingChoice)
     {
-      float randoNum = UnityEngine.Random.Range(0f, 4f);
+      float length = (float)portalChoices.Length;
+      float randoNum = UnityEngine.Random.Range(0f, length - 1);
       int index = (int)Math.Round(randoNum);
       choice = portalChoices[index];
     }

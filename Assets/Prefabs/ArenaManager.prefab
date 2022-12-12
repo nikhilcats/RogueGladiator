@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07459d4b5ac0438283c0a23670dbfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalType: 
 --- !u!1 &2610748663920487640
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,8 +466,8 @@ MonoBehaviour:
   spawnBoundary: {fileID: 0}
   enemies: []
   Enemy1: {fileID: 1844930401815919459, guid: a80e49bbb4d41e6438fecc5eafae4284, type: 3}
-  Enemy2: {fileID: 0}
-  Enemy3: {fileID: 0}
+  Enemy2: {fileID: 2312337106767318785, guid: 37258a8acbc94fc4bbdc317625ba94f3, type: 3}
+  Enemy3: {fileID: 2285276498216158074, guid: 44db67dafbfc04e479c94ad63f133c30, type: 3}
 --- !u!1 &2610748664124171798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,3 +1123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07459d4b5ac0438283c0a23670dbfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalType: 

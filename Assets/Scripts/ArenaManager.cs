@@ -45,6 +45,8 @@ public class ArenaManager : MonoBehaviour
       GameObject.Find("Enemyground").GetComponent<TrapManager>().Disarm();
       //stop boulder spawning
       GameObject.Find("Enemyground").GetComponent<TrapManager>().StopBoulders();
+      //despawn enemies
+      GameObject.Find("Enemyground").GetComponent<EnemyManager>().DespawnEnemies();
       gameState = "fight";
     }
   }
