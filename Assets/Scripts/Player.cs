@@ -96,7 +96,7 @@ public class Player: MovingObject
             Debug.Log("We hit " + enemy.name);
             if (enemy.name == "Enemy1(Clone)")
                 enemy.gameObject.GetComponent<Enemy1>().TakeDamage(damage);
-            else if (enemy.name == "Enemy2(Clone)")
+            if (enemy.name == "Enemy2(Clone)")
                 enemy.gameObject.GetComponent<Enemy2>().TakeDamage(damage);
         }
     }
@@ -124,7 +124,6 @@ public class Player: MovingObject
         //update game manager player health
         gManagerScript.playerHealth = health;
         updateHealthText();
-        Debug.Log("my health is down to " + health);
       }
 
     }

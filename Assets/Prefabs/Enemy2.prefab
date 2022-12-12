@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2312337106767318797}
   - component: {fileID: 5876280129091141528}
   - component: {fileID: 9124379748345815915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c072c4c82532ea40a9f70498e6f7eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
   health: 6
   moveSpeed: 3
   vomit: {fileID: 8509914059308589162, guid: 6aec437ff24774c48a1fa3b4b21e6672, type: 3}

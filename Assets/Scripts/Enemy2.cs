@@ -85,7 +85,7 @@ public class Enemy2 : MovingObject
         if (health < 0)
         {
             Debug.Log("It's time to die.");
-            animator.Play("SlimeDeathDown");
+            animator.Play("blueDeath");
         }
     }
 

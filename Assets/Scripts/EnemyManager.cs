@@ -58,20 +58,16 @@ public class EnemyManager : MonoBehaviour
             Vector2 rndPointInside = spawnBoundary.ClosestPoint(new Vector2(rndPoint2D.x, rndPoint2D.y));
             if (rndPointInside.x == rndPoint2D.x && rndPointInside.y == rndPoint2D.y)
             {
-                Debug.Log("Entered if statement branch with i=" + i);
                 foreach (GameObject enemy in enemies)
                 {
-                    Debug.Log("Entered foreach loop with i=" + i);
                     if (Math.Abs(enemy.transform.position.x - rndPoint2D.x) < delta && Math.Abs(enemy.transform.position.y - rndPoint2D.y) < delta)
                     {
-                        Debug.Log("Too close! Existing enemy at " + enemy.transform.position.x + "," + enemy.transform.position.y + ". Random point is " + rndPoint2D.x + "," + rndPoint2D.y);
                         goto tryAgain;
                     }
                 }
                 GameObject newEnemy = Instantiate(enemyObject, rndPoint2D, Quaternion.identity);
                 newEnemy.transform.parent = this.transform;
                 enemies.Add(newEnemy);
-                Debug.Log("new enemy position: " + rndPoint2D.x + ", " + rndPoint2D.y);
                 i++;
                 tryAgain:;
             }

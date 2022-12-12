@@ -66,11 +66,6 @@ public class Enemy1 : MovingObject
         }
     }
 
-    void Attack()
-    {
-
-    }
-
     public void SlimeDeath()
     {
       //add to kill count
