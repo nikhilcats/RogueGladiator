@@ -4460,8 +4460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arenaManagerPrefab: {fileID: 2610748664318622439, guid: 93c050a79a30b43c5a27ef6c3555094a, type: 3}
-  spikeTrapAmt: 22
-  boulderFreq: 22
+  spikeTrapAmt: 0
+  boulderFreq: 0
   walkEnemyAmt: 0
   jumpEnemyAmt: 0
   rangedEnemyAmt: 0
